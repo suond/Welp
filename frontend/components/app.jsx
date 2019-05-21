@@ -4,17 +4,26 @@ import {Route } from 'react-router-dom'
 import SignUpFormContainer from './session/signup_form_container'    
 import LoginFormContainer from './session/login_form_container'    
 import GreetingContainer from '../components/greeting/greeting_container'
+
+import {AuthRoute} from '../util/route_util'
 const App = () => {
     return (
         <div>
             <header>
-            <h1>Nav here prob with login and signup</h1>
-            <GreetingContainer />
-
+            <nav id="navBar-top">
+                <ul className="left-ul-list">
+                    <li> <a href="#">Write a Review</a></li>
+                </ul>
+                <div className="logo-div">
+                    logo
+                </div>
+                <GreetingContainer />
+            </nav>
+             
             </header>
-            <Route exact path="/signup" component={SignUpFormContainer}/>
-            <Route exact path="/login" component={LoginFormContainer}/>
-            <p>auth route for login/signup</p>
+            <Route exact path="/" render={() => ( <h1>Index Page</h1>)} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
+            <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <p>restaurant stuff here</p>
         </div>
     )
