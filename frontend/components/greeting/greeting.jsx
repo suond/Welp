@@ -8,7 +8,7 @@ const Greeting = (props) => {
     const display = cUser ? (
                 <div className="right-nav-item"> 
                     <ul>
-                    <li> Welcome {cUser.username}! </li>
+                    <li> Welcome {cUser.fName} {cUser.lName}! </li>
                      <li><button onClick={logout} id="logout-btn">Logout</button> </li>
                     </ul>
                 </div>

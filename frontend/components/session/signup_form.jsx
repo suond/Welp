@@ -5,9 +5,11 @@ class SessionForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            username: "",
             email: "",
-            password: ""
+            password: "",
+            fName: "",
+            lName: "",
+            zipcode: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -38,13 +40,19 @@ class SessionForm extends React.Component{
             <div className="form-all">
                 <section className="form-section-left">
 
-                <h3>{this.props.formType}</h3>
+                <h3>{this.props.formType} Up for Welp</h3>
+                <p>By continuing, you agree to Yelp’s Terms of Service and acknowledge Yelp’s Privacy Policy.</p>
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="form-login">
-                        <input type="text" placeholder="email" onChange={this.update("email")}/>
-                        <input type="text" placeholder="username" onChange={this.update("username")}/>
-                        <input type="password" placeholder="password"onChange={this.update("password")}/>
-                        <input type="submit" value="Sign Up" className="form-btn"/>
+                    <div className="input-name-divs">
+                        <input type="text" placeholder="first name" onChange={this.update("fName")}/>
+                        <input type="text" placeholder="last name" onChange={this.update("lName")}/>
+                    </div>
+                    <input type="text" placeholder="email" onChange={this.update("email")}/>
+                    <input type="password" placeholder="password"onChange={this.update("password")}/>
+                    <input type="text" placeholder="Zip Code "onChange={this.update("zipcode")}/>
+                    
+                    <input type="submit" value="Sign Up" className="form-btn"/>
                 </form>
                 </section>
 

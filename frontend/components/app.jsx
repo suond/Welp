@@ -6,7 +6,7 @@ import LoginFormContainer from './session/login_form_container'
 import GreetingContainer from '../components/greeting/greeting_container'
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
-const App = () => {
+const App = (props) => {
     return (
         <div>
             <header>
@@ -17,16 +17,17 @@ const App = () => {
                 <div className="logo-div">
                     logo
                 </div>
-                <GreetingContainer />
+                
+                 <GreetingContainer />
             </nav>
              
             </header>
             <Route exact path="/" render={() => ( <h1>Index Page</h1>)} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurant"/>
-            {/* <ProtectedRoute  path="/restaurant" component={Protected1()} /> */}
+            <ProtectedRoute  path="/restaurant" component={Protected1} />
 
-            <footer>
+            <footer id="foot">
                 <div>
                     <h3>About</h3>
                     <ul>
