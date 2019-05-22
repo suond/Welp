@@ -45,12 +45,8 @@ class SessionForm extends React.Component{
 
                 <h3>{this.props.formType} Up for Welp</h3>
                 <p>Connect with great local businesses</p>
-                <div className="form-warning-message">
-                    <p>By continuing, you agree to Yelp’s <a href="#">Terms of Service</a>  and acknowledge <a href="#">Yelp’s Privacy Policy</a>.</p>
-                </div>
-                <fieldset>
-                    <legend>--------OR-----------</legend>
-                </fieldset>
+                
+                
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="form-login">
                     <div className="input-name-divs">
@@ -65,13 +61,13 @@ class SessionForm extends React.Component{
                     </div>
                     <div className="form-warning-message">
                         <p>
-                        You also understand that Welp may send marketing emails about Yelp’s products, 
+                        You also understand that Welp may send marketing emails about Welp’s products, 
                         services, and local events. 
                         You can unsubscribe at any time.
                         </p>
                     </div>
                     <input type="submit" value="Sign Up" className="form-btn"/>
-                    <small className="small-swap-text">Already on Yelp? <a href="/#/login">Log in</a> </small>
+                    <small className="small-swap-text">Already on Welp? <a href="/#/login">Log in</a> </small>
                 </form>
                 </section>
 

@@ -76,13 +76,14 @@
             background-color: #e8f0fe
         }
         .form-btn{
-            background: red;
+            background: #d32323;
             width: 100%;
             color: white;
             border-radius: 3px;
             font-weight: bold;
             padding: 10px 13px;
             font-size: 16px;
+            border: 1px solid #d32323;
         }
         small {
             text-align: right;
@@ -107,7 +108,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-image: image-url('signup_illustration.png');
-        width: 400px;
+        width: 50%;
         height: 400px;
         align-self: auto;
     }
@@ -122,3 +123,44 @@
     }
 }
 
+.hr-line {
+    border: none;
+    border-top: 1px solid lightgray;
+    margin: 10px 0;
+    width: 40%;
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+
+.hr-line-parent{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    .hr-line{
+        border: none;
+        border-top: 1px solid lightgray;
+        margin: 10px 0;
+        display: inline-flex;
+        align-self: flex-start;
+    }
+    > div {
+        width: 45%;
+
+    }
+    div:nth-child(2){
+        align-self: flex-end;
+        width: 45%;
+    }
+    legend{
+        margin: 0 15px;
+    }
+}
+
+
+    legend {
+        font-size: 1em;
+        padding: 0 15px;
+        color: #666;
+        text-align: center;
+    }

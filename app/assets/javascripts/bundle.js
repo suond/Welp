@@ -467,7 +467,8 @@ function (_React$Component) {
     key: "dummySubmitButton",
     value: function dummySubmitButton() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleDummySubmit
+        onClick: this.handleDummySubmit,
+        className: "form-btn"
       }, "Dummy Account");
     }
   }, {
@@ -479,23 +480,17 @@ function (_React$Component) {
         className: "form-section-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType, " to Welp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "New to Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "##"
-      }, "Sign up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-warning-message"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " By logging in, you you agree to Yelp\u2019s ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Terms of Service "), "and acknowledge ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Yelp\u2019s Privacy Policy"), ". ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("legend", null, "--------OR-----------")), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Sign up")), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "form-login"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        placeholder: "email",
+        placeholder: "Email",
         onChange: this.update("email"),
         className: "input-blue"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
-        placeholder: "password",
+        placeholder: "Password",
         onChange: this.update("password"),
         className: "input-blue"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -510,7 +505,13 @@ function (_React$Component) {
         className: "small-swap-text"
       }, "New to Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/#/signup"
-      }, "Sign Up"), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Click here for a dummy login.  ", this.dummySubmitButton()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "Sign Up"), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hr-line-parent"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hr-line"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("legend", null, "OR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hr-line"
+      })), this.dummySubmitButton())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-image-right"
       })));
     }
@@ -613,13 +614,7 @@ function (_React$Component) {
         className: "form-all"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-section-left"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType, " Up for Welp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Connect with great local businesses"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-warning-message"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By continuing, you agree to Yelp\u2019s ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Terms of Service"), "  and acknowledge ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Yelp\u2019s Privacy Policy"), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("legend", null, "--------OR-----------")), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType, " Up for Welp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Connect with great local businesses"), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "form-login"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -647,13 +642,13 @@ function (_React$Component) {
         onChange: this.update("zipcode")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-warning-message"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You also understand that Welp may send marketing emails about Yelp\u2019s products, services, and local events. You can unsubscribe at any time.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You also understand that Welp may send marketing emails about Welp\u2019s products, services, and local events. You can unsubscribe at any time.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Sign Up",
         className: "form-btn"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
         className: "small-swap-text"
-      }, "Already on Yelp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Already on Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/#/login"
       }, "Log in"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-image-right"

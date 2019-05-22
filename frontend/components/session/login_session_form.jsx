@@ -45,7 +45,7 @@ class SessionForm extends React.Component{
 
     dummySubmitButton() {
         return (
-            <button onClick={this.handleDummySubmit}>Dummy Account</button>
+            <button onClick={this.handleDummySubmit} className="form-btn">Dummy Account</button>
         )
     }
 
@@ -60,17 +60,12 @@ class SessionForm extends React.Component{
                 <small>
                     New to Welp? <a href="##">Sign up</a>
                 </small>
-                <div className="form-warning-message">
-                    <p> By logging in, you you agree to Yelp’s <a href="#">Terms of Service </a>  
-                     and acknowledge <a href="#">Yelp’s Privacy Policy</a>. </p>
-                </div>
-                <fieldset>
-                    <legend>--------OR-----------</legend>
-                </fieldset>
+                
+                
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="form-login">
-                        <input type="text" placeholder="email" onChange={this.update("email")} className="input-blue"/>
-                        <input type="password" placeholder="password" onChange={this.update("password")} className="input-blue"/>
+                        <input type="text" placeholder="Email" onChange={this.update("email")} className="input-blue"/>
+                        <input type="password" placeholder="Password" onChange={this.update("password")} className="input-blue"/>
                         <div className="align-self-right">
                             <small>
                                 <a href="#">Forgot password?</a>                  
@@ -78,7 +73,15 @@ class SessionForm extends React.Component{
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
                         <small className="small-swap-text">New to Welp? <a href="/#/signup">Sign Up</a> </small>
-                        <small>Click here for a dummy login.  {this.dummySubmitButton()}</small>
+                        <div className="hr-line-parent">
+                            <div className="hr-line">
+                            </div>
+                                <legend>OR</legend>
+                            <div className="hr-line">
+                            </div>
+
+                        </div>
+                        {this.dummySubmitButton()}
                 </form>
                 </section>
 
