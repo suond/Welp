@@ -1,0 +1,115 @@
+.form-all{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5%;
+    padding: 30px;
+    .form-section-left{
+        margin: 10px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 350px;
+        p{
+            margin-bottom: 10px;
+        }
+        small{
+            margin: 10px 0;
+            display: inline;
+            text-align: right;
+            
+            a{
+                text-align: right;
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .form-errors{
+        color: red
+        
+    }
+    
+    h3 {
+        color: red;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        /*top right bottom left*/
+        margin: 15px 0;
+    }
+    
+    .form-login{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        
+        .input-name-divs{
+            display: flex;
+            flex-direction: row;
+            box-sizing: content-box;
+            width: 100%;
+            input{
+                width: 100%;
+                margin: 5px;
+                box-sizing: border-box;
+            }
+        }
+
+        input {
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 9px;
+            margin: 5px 10px;
+            width: 97.5%;
+            box-sizing: content-box;
+        }
+        .input-blue{
+            background-color: #e8f0fe
+        }
+        .form-btn{
+            background: red;
+            width: 100%;
+            color: white;
+            border-radius: 3px;
+            font-weight: bold;
+            padding: 10px 13px;
+            font-size: 16px;
+        }
+        small {
+            text-align: right;
+            a{
+                font-size: 12px;
+            }
+        }
+        .small-swap-text{
+            font-size: 12px;
+            color: #999;
+            display: inline-block;
+            text-align: right;
+            a{
+                text-decoration-line: none;
+                font-size: 12px;
+            }
+        }
+    }
+    .form-image-right{
+        margin: 20px;
+
+    }
+}
+
+.form-warning-message{
+    line-height: 1.5em;
+    font-size: 12px;
+    p{
+
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+    }
+}
+

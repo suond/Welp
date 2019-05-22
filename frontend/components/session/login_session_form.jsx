@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import FormNavbar from './form_navbar';
 class SessionForm extends React.Component{
 
     constructor(props){
@@ -34,17 +35,29 @@ class SessionForm extends React.Component{
 
     render(){
         return(
+            <div>
+                <FormNavbar />
             <div className="form-all">
                 <section className="form-section-left" >
 
                 <h3>{this.props.formType} to Welp</h3>
+                <small>
+                    New to Welp? <a href="##">Sign up</a>
+                </small>
+                <div className="form-warning-message">
+                    <p> By logging in, you you agree to Yelp’s <a href="#">Terms of Service </a>  
+                     and acknowledge <a href="#">Yelp’s Privacy Policy</a>. </p>
+                </div>
+                <fieldset>
+                    <legend>--------OR-----------</legend>
+                </fieldset>
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="form-login">
-                        <input type="text" placeholder="email" onChange={this.update("email")}/>
-                        <input type="password" placeholder="password" onChange={this.update("password")}/>
+                        <input type="text" placeholder="email" onChange={this.update("email")} className="input-blue"/>
+                        <input type="password" placeholder="password" onChange={this.update("password")} className="input-blue"/>
                         <div>
                             <small>
-                                <Link to="/" className="small-swap-text">forgot password?</Link>                    
+                                <a href="#">Forgot password?</a>                  
                             </small>
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
@@ -55,6 +68,7 @@ class SessionForm extends React.Component{
                 <section className="form-image-right">
                     image from yelp
                 </section>
+            </div>
             </div>
         )
     }

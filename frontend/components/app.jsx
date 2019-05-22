@@ -9,19 +9,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util'
 const App = (props) => {
     return (
         <div>
-            <header>
-            <nav id="navBar-top">
-                <ul className="left-ul-list">
-                    <li> <a href="#">Write a Review</a></li>
-                </ul>
-                <div className="logo-div">
-                    logo
-                </div>
-                
-                 <GreetingContainer />
-            </nav>
-             
-            </header>
+            
             <Route exact path="/" render={() => ( <h1>Index Page</h1>)} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurant"/>
