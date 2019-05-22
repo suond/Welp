@@ -51,7 +51,7 @@ class SessionForm extends React.Component{
                     <input type="text" placeholder="email" onChange={this.update("email")}/>
                     <input type="password" placeholder="password"onChange={this.update("password")}/>
                     <input type="text" placeholder="Zip Code "onChange={this.update("zipcode")}/>
-                    
+                    <small className="small-swap-text">Already on Yelp? <a href="/#/login">Log in</a> </small>
                     <input type="submit" value="Sign Up" className="form-btn"/>
                 </form>
                 </section>

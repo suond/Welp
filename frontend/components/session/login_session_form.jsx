@@ -44,10 +44,11 @@ class SessionForm extends React.Component{
                         <input type="password" placeholder="password" onChange={this.update("password")}/>
                         <div>
                             <small>
-                                <Link to="/">forgot password?</Link>                    
+                                <Link to="/" className="small-swap-text">forgot password?</Link>                    
                             </small>
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
+                        <small className="small-swap-text">New to Welp? <a href="/#/signup">Sign Up</a> </small>
                 </form>
                 </section>
 

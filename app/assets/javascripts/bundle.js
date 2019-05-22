@@ -454,12 +454,17 @@ function (_React$Component) {
         placeholder: "password",
         onChange: this.update("password")
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/"
+        to: "/",
+        className: "small-swap-text"
       }, "forgot password?"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Log In",
         className: "form-btn"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+        className: "small-swap-text"
+      }, "New to Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/#/signup"
+      }, "Sign Up"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-image-right"
       }, "image from yelp"));
     }
@@ -560,7 +565,7 @@ function (_React$Component) {
         className: "form-all"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-section-left"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType, " Up for Welp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By continuing, you agree to Yelp\u2019s Terms of Service and acknowledge Yelp\u2019s Privacy Policy."), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "form-login"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -585,7 +590,11 @@ function (_React$Component) {
         type: "text",
         placeholder: "Zip Code ",
         onChange: this.update("zipcode")
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+        className: "small-swap-text"
+      }, "Already on Yelp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/#/login"
+      }, "Log in"), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Sign Up",
         className: "form-btn"
@@ -26743,7 +26752,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

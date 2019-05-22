@@ -114,6 +114,17 @@
             font-weight: bold;
             padding: 10px;
         }
+        .small-swap-text{
+            
+            font-size: 12px;
+            color: gray;
+            display: inline;
+            text-align: right;
+            a{
+                text-decoration-line: none;
+                font-size: 12px;
+            }
+        }
     }
     .form-image-right{
         margin: 20px;
