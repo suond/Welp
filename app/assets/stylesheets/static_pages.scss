@@ -3,14 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .logo-div {
-    height: 50px;
-    width: 50px;
-    background: white;
+    
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: image-url('yelp_logo.png');
     
 }
 
 #navBar-top{
-    background: red;
+    background: #d32323;
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,7 +57,9 @@
     }
 }
 
-
+.align-self-right{
+    align-self: flex-end;
+}
 
 #foot {
     position: absolute;

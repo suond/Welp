@@ -10,7 +10,7 @@ const App = (props) => {
     return (
         <div>
             
-            <Route exact path="/" render={() => ( <h1>Index Page</h1>)} />
+            <Route exact path="/" component={GreetingContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurant"/>
             <ProtectedRoute  path="/restaurant" component={Protected1} />

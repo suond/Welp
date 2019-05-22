@@ -54,12 +54,15 @@ class SessionForm extends React.Component{
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="form-login">
                     <div className="input-name-divs">
-                        <input type="text" placeholder="First Name" onChange={this.update("fName")}/>
+                        <input type="text" placeholder="First Name" onChange={this.update("fName")} className="input-fname"/>
                         <input type="text" placeholder="Last Name" onChange={this.update("lName")}/>
                     </div>
+                    <div>
                     <input type="text" placeholder="Email" onChange={this.update("email")}/>
                     <input type="password" placeholder="Password"onChange={this.update("password")}/>
                     <input type="text" placeholder="Zip Code "onChange={this.update("zipcode")}/>
+
+                    </div>
                     <div className="form-warning-message">
                         <p>
                         You also understand that Welp may send marketing emails about Yelp’s products, 
@@ -73,7 +76,7 @@ class SessionForm extends React.Component{
                 </section>
 
                <section className="form-image-right">
-                    image from yelp
+                    
                 </section>
             </div>
         </div>

@@ -182,9 +182,7 @@ var App = function App(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
-    render: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Index Page");
-    }
+    component: _components_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["AuthRoute"], {
     exact: true,
     path: "/signup",
@@ -330,10 +328,7 @@ var FormNavbar = function FormNavbar() {
     id: "navBar-top"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo-div"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "./app/assets/images/yelp_logo.png",
-    alt: "lolnotfound"
-  }))));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FormNavbar);
@@ -428,6 +423,7 @@ function (_React$Component) {
       password: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleDummySubmit = _this.handleDummySubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -458,6 +454,23 @@ function (_React$Component) {
       };
     }
   }, {
+    key: "handleDummySubmit",
+    value: function handleDummySubmit(e) {
+      e.preventDefault();
+      var dummyCred = {
+        email: "fake@this.com",
+        password: "123456"
+      };
+      this.props.processForm(dummyCred);
+    }
+  }, {
+    key: "dummySubmitButton",
+    value: function dummySubmitButton() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleDummySubmit
+      }, "Dummy Account");
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -485,7 +498,9 @@ function (_React$Component) {
         placeholder: "password",
         onChange: this.update("password"),
         className: "input-blue"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "align-self-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
       }, "Forgot password?"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
@@ -495,9 +510,9 @@ function (_React$Component) {
         className: "small-swap-text"
       }, "New to Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/#/signup"
-      }, "Sign Up"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "Sign Up"), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Click here for a dummy login.  ", this.dummySubmitButton()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-image-right"
-      }, "image from yelp")));
+      })));
     }
   }]);
 
@@ -612,12 +627,13 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         placeholder: "First Name",
-        onChange: this.update("fName")
+        onChange: this.update("fName"),
+        className: "input-fname"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         placeholder: "Last Name",
         onChange: this.update("lName")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         placeholder: "Email",
         onChange: this.update("email")
@@ -629,7 +645,7 @@ function (_React$Component) {
         type: "text",
         placeholder: "Zip Code ",
         onChange: this.update("zipcode")
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-warning-message"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You also understand that Welp may send marketing emails about Yelp\u2019s products, services, and local events. You can unsubscribe at any time.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
@@ -641,7 +657,7 @@ function (_React$Component) {
         href: "/#/login"
       }, "Log in"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-image-right"
-      }, "image from yelp")));
+      })));
     }
   }]);
 

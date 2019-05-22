@@ -9,7 +9,8 @@ class SessionForm extends React.Component{
             email: "",
             password: ""
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDummySubmit = this.handleDummySubmit.bind(this);
     }
 
     renderErrors() {
@@ -31,6 +32,21 @@ class SessionForm extends React.Component{
         return e => {
             this.setState( {[field]: e.target.value} )
         }
+    }
+
+    handleDummySubmit(e){
+        e.preventDefault()
+        const dummyCred = {
+            email: "fake@this.com",
+            password: "123456"
+        }
+        this.props.processForm(dummyCred);
+    }
+
+    dummySubmitButton() {
+        return (
+            <button onClick={this.handleDummySubmit}>Dummy Account</button>
+        )
     }
 
     render(){
@@ -55,24 +71,25 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit} className="form-login">
                         <input type="text" placeholder="email" onChange={this.update("email")} className="input-blue"/>
                         <input type="password" placeholder="password" onChange={this.update("password")} className="input-blue"/>
-                        <div>
+                        <div className="align-self-right">
                             <small>
                                 <a href="#">Forgot password?</a>                  
                             </small>
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
                         <small className="small-swap-text">New to Welp? <a href="/#/signup">Sign Up</a> </small>
+                        <small>Click here for a dummy login.  {this.dummySubmitButton()}</small>
                 </form>
                 </section>
 
-                <section className="form-image-right">
-                    image from yelp
+                <section className="form-image-right">   
                 </section>
             </div>
             </div>
         )
     }
 }
+
 
 
 
