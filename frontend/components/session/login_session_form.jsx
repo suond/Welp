@@ -58,7 +58,7 @@ class SessionForm extends React.Component{
 
                 <h3>{this.props.formType} to Welp</h3>
                 <small>
-                    New to Welp? <a href="##">Sign up</a>
+                    New to Welp? <a href="/#/signup">Sign up</a>
                 </small>
                 
                 

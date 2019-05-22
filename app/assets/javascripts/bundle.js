@@ -479,7 +479,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "form-section-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.formType, " to Welp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "New to Welp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "##"
+        href: "/#/signup"
       }, "Sign up")), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "form-login"
