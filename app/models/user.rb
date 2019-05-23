@@ -21,7 +21,7 @@ class User < ApplicationRecord
     validates :email, :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
     validates :password, length: {minimum: 4 }, allow_nil: true
-
+    validates :zipcode, length: {minimum: 5, maximum: 5}
     after_initialize :ensure_session_token
 
     has_one_attached :photo

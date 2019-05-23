@@ -2,8 +2,10 @@
     <% if logged_in? %>
         <script type="text/javascript">
             window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
-            window.icon_url = "<%= image_url('user_default_icon.png')%>"
         </script>
     <% end %>
+    <script>
+         window.icon_url = "<%= image_url('user_default_icon.png')%>"
+    </script>
 
 </main>

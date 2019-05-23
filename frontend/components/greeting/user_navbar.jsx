@@ -25,9 +25,11 @@ class UserNavBar extends React.Component{
         return (
             <header>
                 <nav id="navbar-user">
-                    <div className="logo-div">
-                                        
-                    </div>
+                        <a href="/#">
+                            <div className="logo-div">
+
+                          </div>
+                        </a>
                     <div className="user-modal-container">
                     <div className="user-modal" onClick={this.handleModalClick}>
                         <img src={window.icon_url} alt="not found" id="user-avatar"/>
