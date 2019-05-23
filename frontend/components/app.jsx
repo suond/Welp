@@ -12,7 +12,7 @@ const App = (props) => {
     return (
         <div>
             <ProtectedRoute  path="/restaurant" component={UserNavBar} />
-            <ProtectedRoute  path="/restaurant" component={UserModal} />
+            {/* <ProtectedRoute  path="/restaurant" component={UserModal} /> */}
             <Route exact path="/" component={GreetingContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurant"/>
