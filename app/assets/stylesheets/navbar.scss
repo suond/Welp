@@ -1,0 +1,64 @@
+#navbar-user {
+    background: #d32323;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    #user-avatar {
+        height: 50px;
+    }
+}
+
+#navbar-form{
+    background: #d32323;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    ul{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        li{
+            margin: 0 10px;
+            padding: 7px;
+            a{
+                color: white;
+                font-weight: bold;
+                text-decoration-line: none;
+                padding: 7px;
+                
+            }
+            a:hover{
+                border-bottom: 2px solid white;
+            }
+        }
+        li:nth-child(2){
+            border: 2px solid white;
+            border-radius: 3px;
+            a:hover{
+                color: gray;
+            }
+        }
+        
+    }
+    #logout-btn {
+       background-color: transparent;
+       font-family: 'Roboto', sans-serif;
+       border: none;
+       cursor: pointer;
+       color: white;
+       font-weight: bold;
+    }
+}
+
+.logo-div {   
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: image-url('yelp_logo.png');
+}

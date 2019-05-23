@@ -1,0 +1,56 @@
+#myModal {
+    width: 260px;
+    position: absolute;
+    right: 15%;
+}
+.user-modal{
+    display: flex;
+    div{
+        background-color: #bd1f1f;
+        span {
+            font-size: 20px;
+            color: white;
+            position: relative;
+            top: 25%;
+        }
+        &:hover{
+            background-color: maroon;
+            transition: background-color 0.5s;
+        }
+    } 
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.inner-user-modal {
+    display: flex;
+    div {
+        padding: 8px;
+    }
+}
+
+.modal-content {
+    padding: 12px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    hr{
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px solid lightgray;
+    }
+    img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .modal-logout-btn{
+        background: transparent;
+        color: blue;
+        padding: 8px;
+        border: none;
+        font-size: 14px;
+    }
+}
