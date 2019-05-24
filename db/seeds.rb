@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Restaurant.drop!
+User.drop!
+
 User.create!(fName: "Jimmy", lName: "Kudos", zipcode: "12345", password: "123456", email: "fake@this.com" )
 
 Restaurant.new(owner_id: 1, location_id: 1, name: "Out-n-In", opening_time:"10:00", closing_time:"17:00", address:"1234 not a real address", city: "Stockton", state:"CA", zipcode: "12345")
+Restaurant.new(owner_id: 1, location_id: 1, name: "Pho-King", opening_time:"11:00 am", closing_time:"8:00 pm", address:"1234 not a real address", city: "Sacramento", state:"CA", zipcode: "12345")

@@ -10,7 +10,7 @@ class RestaurantIndexItem extends React.Component{
         const restaurant = this.props.restaurant;
         const rating = "m".length === 1 ? "four_five-reg star-rating" : "five-rg star-rating"
         return (
-        <li>
+        
             <div className="card">
                 <div className="card-photo">
                     <Link to={`/restaurants/${restaurant.id}`}> 
@@ -22,7 +22,7 @@ class RestaurantIndexItem extends React.Component{
                         <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
                     </h3>
                     <div className="star-n-num-review-container">
-                    <div className={rating} ></div>
+                    <div className={rating}></div>
                         <span># reviews</span>
                     </div>
                     <div className="location">
@@ -30,7 +30,7 @@ class RestaurantIndexItem extends React.Component{
                     </div>
                 </div>
             </div>
-        </li>
+        
         )
     }
 

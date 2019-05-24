@@ -1,0 +1,37 @@
+.restaurant-index-container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    .restaurant-index-h3 {
+        text-align: center;
+        color: red;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid lightgray;
+    width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    .card-photo{
+        height: 175px;
+        overflow: hidden;
+    }
+
+    .card-content{
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        div{
+            margin: 5px 0;
+        }
+    }
+}
