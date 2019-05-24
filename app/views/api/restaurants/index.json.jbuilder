@@ -1,5 +1,6 @@
 @restaurants.each do |rest|
     json.set! rest.id do
-        json.extract! rest, :id, :name
+        # grab rating later from 
+        json.extract! rest, :id, :name, :city, :state
     end
 end

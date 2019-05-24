@@ -17,11 +17,11 @@ const Greeting = (props) => {
         (
             <header>
                 <nav id="navbar-form">
-                        <a href="/#">
+                        <Link to="/">
                             <div className="logo-div">
 
                           </div>
-                        </a>
+                        </Link>
                     {display}
                 </nav>
                 

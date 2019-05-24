@@ -1,6 +1,6 @@
 import React from 'react'
 import UserModal from './user_modal'
-
+import {Link} from 'react-router-dom'
 
 class UserNavBar extends React.Component{
 
@@ -25,11 +25,11 @@ class UserNavBar extends React.Component{
         return (
             <header>
                 <nav id="navbar-user">
-                    <a href="/#">
+                    <Link to="/">
                         <div className="logo-div">
                                             
                         </div>
-                    </a>
+                    </Link>
                     <div className="user-modal-container">
                     <div className="user-modal" onClick={this.handleModalClick}>
                         <img src={window.icon_url} alt="not found" id="user-avatar"/>

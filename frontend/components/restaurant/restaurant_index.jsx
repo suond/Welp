@@ -1,31 +1,34 @@
 import React from 'react'
+import RestaurantIndexItem from './restaurant_index_item'
 
 class RestaurantIndex extends React.Component {
     
     constructor(props){
         super(props);
+        
     }
 
-    createRestaurant(){
-        Object.keys(this.props.restaurants).map(key => {
+    createRestaurants(){
+        
+        return this.props.restaurants.map(rest => {
             return (
-                <div>
-                    <p>{this.props.restaurants[key].name }</p>
-                </div>
+                <RestaurantIndexItem key={rest.id} restaurant={rest} />
             )
         })
     }
 
     componentDidMount(){
         this.props.fetchRestaurants();
-        this.rests = this.createRestaurant()
     }
     
     render(){
         return (
-            <div>
-            Restaurant Index
-            {this.rests}
+            <div className="restaurant-index-container">
+            
+            <ul>
+                {this.createRestaurants()}
+            </ul>
+            
         </div>
         )
     }

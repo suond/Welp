@@ -8,18 +8,13 @@ class IndexNavBar extends React.Component{
         super(props) 
     }
 
-
-
     render(){
-        
         return this.props.currentUser ? (
             <UserNavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
         ) : (
             <Greeting />
-        )
-        
+        )   
     }
-
 }
     
     

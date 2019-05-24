@@ -58,7 +58,7 @@ class SessionForm extends React.Component{
 
                 <h3>{this.props.formType} to Welp</h3>
                 <small>
-                    New to Welp? <a href="/#/signup">Sign up</a>
+                    New to Welp? <Link to="/signup">Sign up</Link>
                 </small>
                 
                 
@@ -72,7 +72,7 @@ class SessionForm extends React.Component{
                             </small>
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
-                        <small className="small-swap-text">New to Welp? <a href="/#/signup">Sign Up</a> </small>
+                        <small className="small-swap-text">New to Welp? <Link to="/signup">Sign Up</Link> </small>
                         <div className="hr-line-parent">
                             <div className="hr-line">
                             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import FormNavbar from './form_navbar';
+import {Link} from 'react-router-dom'
 
 class SessionForm extends React.Component{
 
@@ -67,7 +68,7 @@ class SessionForm extends React.Component{
                         </p>
                     </div>
                     <input type="submit" value="Sign Up" className="form-btn"/>
-                    <small className="small-swap-text">Already on Welp? <a href="/#/login">Log in</a> </small>
+                    <small className="small-swap-text">Already on Welp? <Link to="/login">Log in</Link> </small>
                 </form>
                 </section>
 

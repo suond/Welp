@@ -1,14 +1,15 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const FormNavbar = () => {
     return (
         <header>
                     <nav id="navbar-form">
-                        <a href="/#">
+                        <Link to="/">
                             <div className="logo-div">
                                 
                             </div>
-                        </a>
+                        </Link>
                     </nav>
             </header>
     )
