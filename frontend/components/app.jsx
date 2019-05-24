@@ -11,11 +11,11 @@ const App = (props) => {
     
     return (
         <div>
-            <ProtectedRoute  path="/restaurant" component={UserNavBar} />
+            <ProtectedRoute  path="/restaurants" component={UserNavBar} />
             
             <Route exact path="/" component={GreetingContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurant" />
-            <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurant"/>
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
+            <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
 
             <footer id="foot">
                 <div>
