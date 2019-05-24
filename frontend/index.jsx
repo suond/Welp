@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import configureStore from './store/store'
 import Root from './components/root'
 import {login, logout, signup} from './actions/session_actions'
+import {fetchRestaurants, fetchRestaurant} from './actions/restaurant_actions'
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
@@ -29,6 +30,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     window.login = login;
     window.state = store.getState;
     window.dispatch = store.dispatch;
+    window.fetchRestaurants = fetchRestaurants;
+    window.fetchRestaurant = fetchRestaurant;
+
 //end
     ReactDOM.render(<Root store={store}/>, root)
 })

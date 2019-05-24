@@ -12,6 +12,10 @@
 #  closing_time :time             not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  address      :string           not null
+#  city         :string           not null
+#  state        :string           not null
+#  zipcode      :string           not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

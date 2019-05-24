@@ -8,7 +8,6 @@ const FormNavbar = () => {
                             <div className="logo-div">
                                 
                             </div>
-
                         </a>
                     </nav>
             </header>
