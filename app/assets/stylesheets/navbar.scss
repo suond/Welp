@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     ul{
         display: flex;
         flex-direction: row;
@@ -44,13 +44,26 @@
         }
         
     }
+    div{
+        display: flex;
+        justify-content: space-around;
+        h2{
+            margin-right: 10px;
+        }
+    }
     #logout-btn {
+        box-sizing: border-box;
        background-color: transparent;
        font-family: 'Roboto', sans-serif;
        border: none;
        cursor: pointer;
        color: white;
        font-weight: bold;
+       font-size: 16px;
+       margin-left: 5px;
+       &:hover {
+           border: 2px solid white;
+       }
     }
 }
 

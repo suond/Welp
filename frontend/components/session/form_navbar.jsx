@@ -4,9 +4,12 @@ const FormNavbar = () => {
     return (
         <header>
                     <nav id="navbar-form">
-                        <div className="logo-div">
-                            
-                        </div>
+                        <a href="/#">
+                            <div className="logo-div">
+                                
+                            </div>
+
+                        </a>
                     </nav>
             </header>
     )

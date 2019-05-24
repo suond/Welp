@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
-import Greeting from './greeting'
 import { logout } from '../../actions/session_actions'
+
+import IndexNavBar from '../ui/index_navbar';
 
 const mapStateToProps = (state, ownProps) => {
     const cUser = state.entities.users[state.session.currentUserId]
@@ -15,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Greeting)
+export default connect(mapStateToProps,mapDispatchToProps)(IndexNavBar)
