@@ -3,7 +3,7 @@ import React from 'react'
 import {Route } from 'react-router-dom'
 import SignUpFormContainer from './session/signup_form_container'    
 import LoginFormContainer from './session/login_form_container'    
-import GreetingContainer from '../components/greeting/greeting_container'
+import IndexNavBarContainer from './greeting/index_navbar_container'
 import UserNavBar from '../components/greeting/user_navbar_container'
 
 
@@ -14,7 +14,8 @@ const App = (props) => {
         <div>
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
             
-            <Route exact path="/" component={GreetingContainer} />
+            <Route exact path="/" component={IndexNavBarContainer} />
+            <Route exact path="/" component={Index1} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
 
@@ -29,5 +30,5 @@ const App = (props) => {
         </div>
     )
 }
-const Protected1 = () => <h3>Protected Content</h3>;
+const Index1 = () => <h3>Random Index content <a href="/#/restaurants">restaurants</a></h3>;
 export default App;
