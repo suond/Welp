@@ -31,7 +31,7 @@ class RestaurantShow extends React.Component{
             ) : null;
 
         const displayC = restaurant ? (
-            <div className="show-restaurant-content-container">
+            <div className="show-restaurant-content">
                 <div className="show-restaurant-location-detail">
                     <div className="gMap-show">
                         <p>MAP</p>
@@ -44,12 +44,31 @@ class RestaurantShow extends React.Component{
                 </div>
             </div>
         ) : null
+
+        const displayHours = restaurant ? (
+            <div className="relative">
+                <div className="hour-container">
+                    <h2 className="hour-h2">Hours</h2>
+                     <table>
+                         <tbody>
+                            <tr>
+                                <th>Mon</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                             
+                         </tbody>
+                     </table>
+                </div>
+            </div>
+        ) : null
+
         return (
             <div>
                 {/* <UserNavBarContainer /> */}
                 <div className="show-content-container">
                     {displayH}
                     {displayC}
+                    {displayHours}
                 </div>
             </div>
         );

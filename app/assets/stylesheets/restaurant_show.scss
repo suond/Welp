@@ -1,5 +1,5 @@
 .show-content-container{
-    padding: 5px;
+    padding: 40px;
     h1{
         font-size: 36px;
     }
@@ -8,6 +8,19 @@
         * {
             margin: 10px 0;
         }
+    }
+    .show-restaurant-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hour-container {
+        .hour-h2{
+            color: red;
+            margin: 12px 0;
+        }
+        position: absolute;
+        right: 10px;
     }
 }
 
