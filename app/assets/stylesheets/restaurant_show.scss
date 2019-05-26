@@ -1,0 +1,25 @@
+.show-content-container{
+    padding: 5px;
+    h1{
+        font-size: 36px;
+    }
+    .header-restaurant{
+        display: flex;
+        * {
+            margin: 10px 0;
+        }
+    }
+}
+
+.link-btn {
+    cursor: pointer;
+
+    border: 1px solid lightgray;
+    color: lightgray;
+    padding: 2px;
+    &:hover {
+        color: black;
+        border: 1px solid gray;
+        transition: color 1s, border 1s
+    }
+}

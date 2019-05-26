@@ -9,13 +9,17 @@ import {Link} from 'react-router-dom'
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
+import RestaurantShowContainer from './restaurant/restaurant_show_container'
+
 const App = (props) => {
     
     return (
         <div>
+
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
-            <ProtectedRoute  path="/restaurants" component={RestaurantIndexContainer} />
-            
+            <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
+            <ProtectedRoute path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+
             <Route exact path="/" component={IndexNavBarContainer} />
             <Route exact path="/" component={Index1} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />

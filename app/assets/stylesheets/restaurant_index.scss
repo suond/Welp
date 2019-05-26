@@ -8,6 +8,9 @@
         padding-top: 10px;
         font-weight: bold;
     }
+    .restaurant-card-container{
+        display: flex;
+    }
 }
 
 .card {
@@ -17,12 +20,14 @@
     margin-top: 30px;
     border: 1px solid lightgray;
     width: 300px;
+    height: 300px;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
     border-radius: 10px;
     .card-photo{
-        height: 175px;
+        height: 180px;
+        width: 97%;
         overflow: hidden;
     }
 
@@ -30,8 +35,16 @@
 
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
+        padding: 7px;
         div{
             margin: 5px 0;
+        }
+        .star-n-num-review-container{
+            display: flex;
+            align-items: center;
+            div{
+                margin-right: 12px;
+            }
         }
     }
 }
