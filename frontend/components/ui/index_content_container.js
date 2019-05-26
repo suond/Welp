@@ -1,12 +1,12 @@
 import {connect} from 'react-redux'
-import RestaurantIndex from './restaurant_index'
+import RestaurantIndex from '../restaurant/restaurant_index'
 import {fetchRestaurants} from '../../actions/restaurant_actions'
 
 const mapStateToProps = state => {
     
     return {
         restaurants: Object.values(state.entities.restaurants),
-        h3text: "Some Restaurants on Welp"
+        h3text: "Login to check out these Restaurant on Welp"
     }
 
 }

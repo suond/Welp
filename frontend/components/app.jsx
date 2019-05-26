@@ -1,13 +1,15 @@
 import React from 'react'
 
 import {Route } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import {AuthRoute, ProtectedRoute} from '../util/route_util'
+
 import SignUpFormContainer from './session/signup_form_container'    
 import LoginFormContainer from './session/login_form_container'    
 import IndexNavBarContainer from './greeting/index_navbar_container'
 import UserNavBar from '../components/greeting/user_navbar_container'
-import {Link} from 'react-router-dom'
 
-import {AuthRoute, ProtectedRoute} from '../util/route_util'
+import IndexContentContainer from './ui/index_content_container'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import RestaurantShowContainer from './restaurant/restaurant_show_container'
 
@@ -21,7 +23,7 @@ const App = (props) => {
             <ProtectedRoute path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
 
             <Route exact path="/" component={IndexNavBarContainer} />
-            <Route exact path="/" component={Index1} />
+            <Route exact path="/" component={IndexContentContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
 

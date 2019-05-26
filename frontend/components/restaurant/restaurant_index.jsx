@@ -24,7 +24,7 @@ class RestaurantIndex extends React.Component {
     render(){
         return (
             <div className="restaurant-index-container">
-                <h3 className="restaurant-index-h3"> Some Restaurants on Welp</h3>
+                <h3 className="restaurant-index-h3"> {this.props.h3text}</h3>
                 <div className="restaurant-card-container">
                     {this.createRestaurants()}  
                 </div>
