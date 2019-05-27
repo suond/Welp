@@ -21,7 +21,7 @@ class UserNavBar extends React.Component{
     render(){
         const cUser = this.props.currentUser;
         const logout = this.props.logout;
-
+        const avatar =  window.icon_url;
         return (
             <header>
                 <nav id="navbar-user">
@@ -32,7 +32,7 @@ class UserNavBar extends React.Component{
                     </Link>
                     <div className="user-modal-container">
                     <div className="user-modal" onClick={this.handleModalClick}>
-                        <img src={window.icon_url} alt="not found" id="user-avatar"/>
+                        <img src={avatar} alt="not found" id="user-avatar"/>
                         <div>
                             <span>&#9660;</span>
                         </div>

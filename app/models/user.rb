@@ -24,7 +24,7 @@ class User < ApplicationRecord
     validates :zipcode, length: {minimum: 5, maximum: 5}
     after_initialize :ensure_session_token
 
-    has_one_attached :photo
+    has_one_attached :avatar
     has_many :restaurants
 
     def self.find_by_credentials(email, password)

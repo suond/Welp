@@ -9,13 +9,13 @@ class UserModal extends React.Component {
 
 
     render() {
-        
+        const avatar = window.icon_url;
         return (
             <div id="myModal" className="arrow_box">
                 <div className="modal-content">
                     
                     <div className="inner-user-modal">
-                        <img src={window.icon_url} alt="not found" id="user-avatar-inner"/>
+                        <img src={avatar} alt="not found" id="user-avatar-inner"/>
                         <div>
                             <ul>
                                 <li>{this.props.currentUser.fName} {this.props.currentUser.lName}</li>

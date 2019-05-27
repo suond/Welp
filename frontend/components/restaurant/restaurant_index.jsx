@@ -22,9 +22,18 @@ class RestaurantIndex extends React.Component {
     }
     
     render(){
+
+        let h3Dis = null;
+        if (this.props.page === "restaurant_index"){
+            h3Dis = "Some restaurant on Welp"
+        } else if (this.props.page === "index" && !this.props.currentUser){
+            h3Dis = "Login to check out the restaurant "
+        }
+
+
         return (
             <div className="restaurant-index-container">
-                <h3 className="restaurant-index-h3"> {this.props.h3text}</h3>
+                <h3 className="restaurant-index-h3">{h3Dis} </h3>
                 <div className="restaurant-card-container">
                     {this.createRestaurants()}  
                 </div>

@@ -1,5 +1,31 @@
 #foot{
+    padding: 10px;
+    background-color: #f5f5f5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid gray;
+    h3{
+        color: red;
+        margin: 10px;
+
+    }
     .footer-list-items{
         padding: 10px;
+    }
+    .footer-img {
+        background-image: image-url('footer_cityscape.png');
+        background-size: 660px 140px;
+        height: 140px;
+        background-repeat: no-repeat;
+        color: black;
+        width: 660px;
+        margin: auto;
+    }
+    .foot-copyright{
+        font-size: 12px;
+        text-align: center;
+        display: block;
+        margin-top: 7px;
     }
 }

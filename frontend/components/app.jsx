@@ -34,6 +34,10 @@ const App = (props) => {
                         <li>About Welp</li>
                     </ul>
                 </div>
+                <div className="footer-img">
+
+                </div>
+                <small className="foot-copyright">Copyright © 2004–2019 Yelp Inc. Yelp </small>
             </footer>
         </div>
     )
