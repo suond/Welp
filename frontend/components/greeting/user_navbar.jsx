@@ -21,7 +21,7 @@ class UserNavBar extends React.Component{
     render(){
         const cUser = this.props.currentUser;
         const logout = this.props.logout;
-        const avatar =  window.icon_url;
+        const avatar = cUser.photoUrl || window.icon_url;
         return (
             <header>
                 <nav id="navbar-user">

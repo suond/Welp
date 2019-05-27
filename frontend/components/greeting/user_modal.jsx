@@ -9,7 +9,7 @@ class UserModal extends React.Component {
 
 
     render() {
-        const avatar = window.icon_url;
+        const avatar = this.props.currentUser.photoUrl|| window.icon_url;
         return (
             <div id="myModal" className="arrow_box">
                 <div className="modal-content">

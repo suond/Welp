@@ -16,6 +16,7 @@ class RestaurantShow extends React.Component{
     }
 
     render(){
+        //if !restaurant return null
         const restaurant = this.props.restaurant;
         const displayH = restaurant ? (
             <div className="header-restaurant">
@@ -53,6 +54,31 @@ class RestaurantShow extends React.Component{
                          <tbody>
                             <tr>
                                 <th>Mon</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Tue</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                            <tr>
+                                <th>Wed</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                            <tr>
+                                <th>Thur</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                            <tr>
+                                <th>Fri</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                            <tr>
+                                <th>Sat</th>
+                                <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
+                            </tr>
+                            <tr>
+                                <th>Sun</th>
                                 <td>{restaurant.opening_time_str} - {restaurant.closing_time_str}</td>
                             </tr>
                              
