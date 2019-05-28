@@ -1,5 +1,6 @@
 import React from 'react'
 import RestaurantIndexItem from './restaurant_index_item'
+import {Redirect} from 'react-router-dom'
 
 class RestaurantIndex extends React.Component {
     
@@ -20,6 +21,10 @@ class RestaurantIndex extends React.Component {
     componentDidMount(){
         this.props.fetchRestaurants();
     }
+
+    redirect(){
+        return <Redirect to="/restaurants/" />
+    }
     
     render(){
         let h3Dis = null;
@@ -29,6 +34,9 @@ class RestaurantIndex extends React.Component {
             h3Dis = "Login to check out the restaurants "
         }
 
+        if (this.props.currentUser){
+            return this.redirect()
+        }
 
         return (
             <div className="restaurant-index-container">

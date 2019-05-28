@@ -1,6 +1,6 @@
 import React from 'react'
 import RestaurantShowPhotoItem from './restaurant_show_photo_item';
-
+import RestaurantShowPhotoAll from './restaurant_show_photo_all'
 //import photoCompnent
 
 
@@ -33,7 +33,7 @@ const RestaurantShowContent = (props) => {
                 <div className="show-photo-collection">
                     <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
                     <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
-                    
+                    <RestaurantShowPhotoAll photos={props.restaurant.photoUrl} />
                 </div>
             </div>
     )
