@@ -3,7 +3,7 @@ import React from 'react'
 const RestaurantShowHours = (props) => {
     const restaurant = props.restaurant
     return (
-        <div className="relative">
+        <div className="flex justify-end">
         <div className="hour-container">
             <h2 className="hour-h2">Hours</h2>
              <table>

@@ -16,6 +16,7 @@ import RestaurantShowContainer from './restaurant_show/restaurant_show_container
 const App = (props) => {
     
     return (
+        <>
         <div>
 
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
@@ -27,6 +28,7 @@ const App = (props) => {
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
 
+        </div>
             <footer id="foot">
                 <div>
                     <h3>About</h3>
@@ -39,7 +41,7 @@ const App = (props) => {
                 </div>
                 <small className="foot-copyright">Copyright © 2004–2019 Yelp Inc. Yelp </small>
             </footer>
-        </div>
+            </>
     )
 }
 const Index1 = () => <h3>Random Index content <Link to="/restaurants">restaurants</Link></h3>;

@@ -7,11 +7,16 @@ import RestaurantShowPhotoItem from './restaurant_show_photo_item';
 const RestaurantShowContent = (props) => {
     const restaurant = props.restaurant;
 
-    const photoItems = restaurant.photoUrl.map((url,idx) => {
-        return (
-            <RestaurantShowPhotoItem url={url} key={idx}/>
-        )
-    })
+    // const photoItems = restaurant.photoUrl.map((url,idx) => {
+    //     return (
+    //         <RestaurantShowPhotoItem url={url} key={idx}/>
+    //     )
+    // })
+    if (restaurant.photoUrl.length > 3) {
+        //render the collage with the 4 images in a block
+    } else {
+        //just render a showphotoitem
+    }
 
     return (
         <div className="show-restaurant-content">
@@ -19,11 +24,16 @@ const RestaurantShowContent = (props) => {
                     <div className="gMap-show">
                         <p>MAP</p>
                     </div>
-                    {restaurant.address}
-                    <p>{restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
+                    <div className="show-restaurant-address">
+                        <i className="fas fa-map-marker-alt"></i>  {restaurant.address}
+                        <p>{restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
+
+                    </div>
                 </div>
                 <div className="show-photo-collection">
-                    {photoItems}
+                    <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
+                    <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
+                    
                 </div>
             </div>
     )
