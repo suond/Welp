@@ -1,7 +1,7 @@
 import * as APIUtils from '../util/restaurant_api_util'
 
 export const RECEIVE_ALL_RESTAURANTS = "RECEIVE_ALL_RESTAURANTS"
-export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANTS"
+export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANT"
 export const REMOVE_RESTAURANT = "REMOVE_RESTAURANT"
 
 const receiveAllRestaurants = restaurants => {

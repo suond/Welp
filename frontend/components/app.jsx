@@ -11,7 +11,7 @@ import UserNavBar from '../components/greeting/user_navbar_container'
 
 import IndexContentContainer from './ui/index_content_container'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
-import RestaurantShowContainer from './restaurant/restaurant_show_container'
+import RestaurantShowContainer from './restaurant_show/restaurant_show_container'
 
 const App = (props) => {
     

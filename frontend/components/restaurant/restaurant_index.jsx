@@ -22,7 +22,6 @@ class RestaurantIndex extends React.Component {
     }
     
     render(){
-
         let h3Dis = null;
         if (this.props.page === "restaurant_index"){
             h3Dis = "Some restaurants on Welp"

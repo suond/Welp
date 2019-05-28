@@ -10,11 +10,36 @@
         }
     }
     .show-restaurant-content{
+        
         display: flex;
         justify-content: space-between;
+        .show-restaurant-location-detail{
+            border: 1px solid lightgray;
+            padding: 10px;
+            font-size: 14px;
+            width: 250px;
+        }
+        .gMap-show{
+            height: 135px;
+            border: 1px solid lightgray;
+            margin: 5px 0;
+            p{
+                display: inline;
+                text-align: center;
+                vertical-align: 50%
+            }
+        }
+    }
+    .show-photo-div{
+        .img-show{
+            width: 220px;
+            height: 220px;
+        }
     }
 
     .hour-container {
+        border-left: 1px solid lightgray;
+        padding: 12px;
         .hour-h2{
             color: red;
             margin: 12px 0;
@@ -23,9 +48,10 @@
             padding-right: 10px;
             font-weight: bold;
         }
-        position: absolute;
-        right: 10px;
+        position: relative;
+        left: 770px;
         font-size: 14px;
+        width: fit-content;
     }
 }
 
@@ -34,10 +60,11 @@
 
     border: 1px solid lightgray;
     color: lightgray;
-    padding: 2px;
+    padding: 3px;
+    font-size: 14px;
     &:hover {
         color: black;
         border: 1px solid gray;
-        transition: color 1s, border 1s
+        transition: color 0.5s, border 0.5s;
     }
 }

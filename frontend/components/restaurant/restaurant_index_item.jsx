@@ -7,14 +7,18 @@ class RestaurantIndexItem extends React.Component{
     }
 
     render() {
+        
         const restaurant = this.props.restaurant;
         const rating = "m".length === 1 ? "four_five-reg star-rating" : "five-rg star-rating"
+        let thumb = null;
+        if (restaurant.photoUrl)
+            thumb = restaurant.photoUrl[0];
         return (
         
             <div className="card">
                 <div className="card-photo">
                     <Link to={`/restaurants/${restaurant.id}`}> 
-                        <img src="" alt="image placeholder"/>
+                        <img src={thumb} alt="image placeholder"/>
                     </Link>
                 </div>
                 <div className="card-content">
