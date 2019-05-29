@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 const RestaurantShowHeader = (props) => {
     const restaurant = props.restaurant
+
     return (
         <div className="header-restaurant">
                 <div>
@@ -11,7 +12,7 @@ const RestaurantShowHeader = (props) => {
                      <Link to="/" className="link-btn show-header">Edit</Link>
                 </div>
                 <div className="show-restaurant-buttons">
-
+                    <button> add photo</button>
                 </div>
             </div>
     )

@@ -6,6 +6,7 @@ export const fetchRestaurants = () =>{
 }
 
 export const fetchRestaurant = (id) =>{
+    
     return $.ajax({
         method: "GET",
         url: `/api/restaurants/${id}`
@@ -13,10 +14,13 @@ export const fetchRestaurant = (id) =>{
 }
 
 export const createRestaurant = (restaurant) =>{
+    
     return $.ajax({
         method: "POST",
         url: '/api/restaurants',
-        data: { restaurant }
+        data:  restaurant,
+        contentType: false,
+        processData: false 
     })
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import RestaurantShowPhotoItem from './restaurant_show_photo_item';
 import RestaurantShowPhotoAll from './restaurant_show_photo_all'
-//import photoCompnent
+
 
 
 const RestaurantShowContent = (props) => {

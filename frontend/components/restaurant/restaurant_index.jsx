@@ -1,6 +1,7 @@
 import React from 'react'
 import RestaurantIndexItem from './restaurant_index_item'
 import {Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class RestaurantIndex extends React.Component {
     
@@ -28,9 +29,11 @@ class RestaurantIndex extends React.Component {
     
     render(){
         let h3Dis = null;
+        let link = null;
         if (this.props.page === "restaurant_index"){
             h3Dis = "Some restaurants on Welp"
-        } else if (this.props.page === "index" && !this.props.currentUser){
+            link = <Link to="/restaurants/new" className="create-restaurant-btn"><i className="fas fa-utensils"></i> Create restaurant</Link>
+        } else if (this.props.page === "root" && !this.props.currentUser){
             h3Dis = "Login to check out the restaurants "
         }
 
@@ -40,7 +43,11 @@ class RestaurantIndex extends React.Component {
 
         return (
             <div className="restaurant-index-container">
-                <h3 className="restaurant-index-h3">{h3Dis} </h3>
+                <div className="relative">
+                    <h3 className="restaurant-index-h3">{h3Dis} </h3>
+                    {link}
+                </div>
+
                 <div className="restaurant-card-container">
                     {this.createRestaurants()}  
                 </div>

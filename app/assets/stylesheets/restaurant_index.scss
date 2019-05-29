@@ -2,12 +2,25 @@
     display: flex;
     align-content: center;
     flex-direction: column;
-    height: 70vh;
+    min-height: 80vh;
     .restaurant-index-h3 {
         text-align: center;
         color: red;
         padding-top: 10px;
         font-weight: bold;
+    }
+    .create-restaurant-btn{
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        padding: 7px;
+        border: 1px solid blue;
+        border-radius: 6px;
+        
+        &:hover{
+            background-color: linen;
+            transition: background-color 0.4s;
+        }
     }
     .restaurant-card-container{
         display: flex;
@@ -24,16 +37,16 @@
     border: 1px solid lightgray;
     width: 300px;
     height: 300px;
-    padding-left: 15px;
-    padding-right: 15px;
+    
     box-sizing: border-box;
     border-radius: 10px;
     .card-photo{
         height: 180px;
-        width: 97%;
+        width: 100%;
         overflow: hidden;
         img{
             height: 180px;
+            width: 100%;
         }
     }
 

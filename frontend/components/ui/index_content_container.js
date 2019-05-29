@@ -6,7 +6,7 @@ const mapStateToProps = state => {
     
     return {
         restaurants: Object.values(state.entities.restaurants),
-        page: "index",
+        page: "root",
         currentUser: state.entities.users[state.session.currentUserId]
     }
 

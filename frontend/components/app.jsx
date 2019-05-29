@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Route } from 'react-router-dom'
+import {Route, Switch } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 
@@ -12,16 +12,21 @@ import UserNavBar from '../components/greeting/user_navbar_container'
 import IndexContentContainer from './ui/index_content_container'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import RestaurantShowContainer from './restaurant_show/restaurant_show_container'
+import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
+
 
 const App = (props) => {
     
     return (
         <>
         <div>
-
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
+        <Switch>
             <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
+            <ProtectedRoute path="/restaurants/new" component={RestaurantCreateFormContainer} />
             <ProtectedRoute path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+
+        </Switch>
 
             <Route exact path="/" component={IndexNavBarContainer} />
             <Route exact path="/" component={IndexContentContainer} />
