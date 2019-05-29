@@ -1,10 +1,10 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 
 class RestaurantForm extends React.Component {
 
     constructor(props){
         super(props)
-        console.log("hello")
         this.state = props.restaurant;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -19,7 +19,6 @@ class RestaurantForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault()
-        console.log(this.state)
         const formData = new FormData();
 
         Object.keys(this.state).forEach(key => {
@@ -31,17 +30,27 @@ class RestaurantForm extends React.Component {
                 formData.append(`restaurant[${key}]`, this.state[key])
             }
         })
-        
-        this.props.createRestaurant(formData)
-        .then( restaurant=> {
-            debugger 
-             this.props.history.push(`/restaurants/${restaurant.restaurant.id}`)
-        })
+        debugger
+        if(this.props.formtype === 'edit'){
+            this.props.processData(formData, this.props.restaurant.id)
+            .then( restaurant=> {
+                debugger 
+                 this.props.history.push(`/restaurants/${restaurant.restaurant.id}`)
+            })
+        } else {
+            this.props.processData(formData)
+            .then( restaurant=> {
+                debugger 
+                 this.props.history.push(`/restaurants/${restaurant.restaurant.id}`)
+            })
+        }
     }
 
     render() {
+        
         return (
             <div className="restaurant-form-container">
+                <h2>{this.props.formtype}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <ul>
                         <li>
@@ -149,12 +158,12 @@ class RestaurantForm extends React.Component {
                             <label>
                                 Hours
                             </label>
-                            <select name="opening" id="" onChange={this.onChange("opening_time")}>
+                            <select name="opening" id="" onChange={this.onChange("opening_time")} value={this.state.opening_time}>
                                 <option value="7:00 am">7:00 am</option>
                                 <option value="8:00 am">8:00 am</option>
                                 <option value="9:00 am">9:00 am</option>
                             </select> --- 
-                            <select name="closing" id="" onChange={this.onChange("closing_time")}>
+                            <select name="closing" id="" onChange={this.onChange("closing_time")} value={this.state.closing_time}>
                                 <option value="7:00 pm">7:00 pm</option>
                                 <option value="8:00 pm">8:00 pm</option>
                                 <option value="9:00 pm">9:00 pm</option>
@@ -165,7 +174,7 @@ class RestaurantForm extends React.Component {
                             <input type="file" onChange={e => this.setState({photos: e.target.files })} multiple />
                         </li>
                     </ul>
-                    <input type="submit" value="Create restaurant"/>
+                    <input type="submit" value={`${this.props.formtype} restaurant`}/>
                 </form>
 
             </div>
@@ -174,4 +183,4 @@ class RestaurantForm extends React.Component {
 
 }
 
-export default RestaurantForm
+export default withRouter(RestaurantForm)

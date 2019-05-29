@@ -11,7 +11,7 @@ class Api::RestaurantsController < ApplicationController
         if @restaurant.save
             render 'api/restaurants/show'
         else
-            render json: @restaurant.errors.full_messages, status: 400
+            render json: @restaurant.errors.full_messages, status: 422
         end
     end
 
@@ -20,6 +20,22 @@ class Api::RestaurantsController < ApplicationController
         render :show
     end
 
+    def update
+        @restaurant = Restaurant.find_by(id: params[:id])
+        if @restaurant.update(restaurant_params)
+            render :show
+        else
+            render json: @restaurant.errors.full_messages, status: 422
+        end
+    end
+
+
+    def destroy
+        @restaurant = Event.find(params[:id])
+        @restaurant.destroy
+
+        render :show
+    end
 
     private
 

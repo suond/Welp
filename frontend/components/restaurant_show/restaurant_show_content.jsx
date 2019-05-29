@@ -2,7 +2,7 @@ import React from 'react'
 import RestaurantShowPhotoItem from './restaurant_show_photo_item';
 import RestaurantShowPhotoAll from './restaurant_show_photo_all'
 
-
+import {Link} from 'react-router-dom'
 
 const RestaurantShowContent = (props) => {
     const restaurant = props.restaurant;
@@ -17,7 +17,10 @@ const RestaurantShowContent = (props) => {
     } else {
         //just render a showphotoitem
     }
-
+    let websiteLink = null;
+    if (restaurant.website){
+        websiteLink = <a href={restaurant.website}>{restaurant.website}</a>;
+    }
     return (
         <div className="show-restaurant-content">
                 <div className="show-restaurant-location-detail">
@@ -27,6 +30,8 @@ const RestaurantShowContent = (props) => {
                     <div className="show-restaurant-address">
                         <i className="fas fa-map-marker-alt"></i>  {restaurant.address}
                         <p>{restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
+                        <p><i className="fas fa-phone"></i>{restaurant.phone_number}</p>
+                        {websiteLink}
 
                     </div>
                 </div>

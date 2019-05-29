@@ -39,8 +39,8 @@ export const createRestaurant = restaurant => dispatch => {
     )
 }
 //check for errors later here
-export const updateRestaurant = restaurant => dispatch => {
-    return APIUtils.updateRestaurant(restaurant)
+export const updateRestaurant = (restaurant, id) => dispatch => {
+    return APIUtils.updateRestaurant(restaurant,id )
     .then(restaurant => dispatch(receiveRestaurant(restaurant)))
 }
 

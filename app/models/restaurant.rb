@@ -31,10 +31,10 @@ class Restaurant < ApplicationRecord
     class_name: :Location
 
     def opening_time_str
-        self.opening_time.strftime("%I:%M:%S %P")
+        self.opening_time.strftime("%I:%M %P")
     end
 
     def closing_time_str
-        self.closing_time.strftime("%I:%M:%S %P")
+        self.closing_time.strftime("%I:%M %P")
     end
 end

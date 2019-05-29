@@ -13,6 +13,7 @@ import IndexContentContainer from './ui/index_content_container'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import RestaurantShowContainer from './restaurant_show/restaurant_show_container'
 import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
+import RestaurantEditFormContainer from './restaurant_form/restaurant_edit_form_container'
 
 
 const App = (props) => {
@@ -22,10 +23,10 @@ const App = (props) => {
         <div>
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
         <Switch>
+            <ProtectedRoute path="/restaurants/:restaurantId/edit" component={RestaurantEditFormContainer} />
             <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
+            <ProtectedRoute exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
             <ProtectedRoute path="/restaurants/new" component={RestaurantCreateFormContainer} />
-            <ProtectedRoute path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
-
         </Switch>
 
             <Route exact path="/" component={IndexNavBarContainer} />

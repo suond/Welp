@@ -9,7 +9,7 @@ const RestaurantShowHeader = (props) => {
                 <div>
                     <h1>{restaurant.name}</h1>
                     <div className="star-rating four_five-lg"></div>
-                     <Link to="/" className="link-btn show-header">Edit</Link>
+                     <Link to={`/restaurants/${restaurant.id}/edit`} className="link-btn show-header">Edit</Link>
                 </div>
                 <div className="show-restaurant-buttons">
                     <button> add photo</button>

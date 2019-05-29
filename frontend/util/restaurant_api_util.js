@@ -24,11 +24,13 @@ export const createRestaurant = (restaurant) =>{
     })
 }
 
-export const updateRestaurant = (restaurant) =>{
+export const updateRestaurant = (restaurant, id) =>{
     return $.ajax({
-        method: "GET",
-        url: `/api/restaurants/${restaurant.id}`,
-        data: {restaurant}
+        method: "PATCH",
+        url: `/api/restaurants/${id}`,
+        data: restaurant,
+        contentType: false,
+        processData: false 
     })
 }
 

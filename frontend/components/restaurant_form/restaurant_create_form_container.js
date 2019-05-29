@@ -25,7 +25,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createRestaurant: (restaurant) => dispatch(createRestaurant(restaurant))
+        processData: (restaurant) => dispatch(createRestaurant(restaurant))
     }
 }
 
