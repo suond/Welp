@@ -30,17 +30,17 @@ class RestaurantForm extends React.Component {
                 formData.append(`restaurant[${key}]`, this.state[key])
             }
         })
-        debugger
+        
         if(this.props.formtype === 'edit'){
             this.props.processData(formData, this.props.restaurant.id)
             .then( restaurant=> {
-                debugger 
+                 
                  this.props.history.push(`/restaurants/${restaurant.restaurant.id}`)
             })
         } else {
             this.props.processData(formData)
             .then( restaurant=> {
-                debugger 
+                 
                  this.props.history.push(`/restaurants/${restaurant.restaurant.id}`)
             })
         }

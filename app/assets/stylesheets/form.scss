@@ -1,3 +1,7 @@
+.min-height{
+    min-height: 80vh;
+}
+
 .form-all{
     display: flex;
     flex-direction: row;
@@ -157,11 +161,11 @@
         margin: 0 15px;
     }
 }
-
-
     legend {
         font-size: 1em;
         padding: 0 15px;
         color: #666;
         text-align: center;
     }
+
+

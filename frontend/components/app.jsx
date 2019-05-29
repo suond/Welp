@@ -23,10 +23,10 @@ const App = (props) => {
         <div>
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
         <Switch>
-            <ProtectedRoute path="/restaurants/:restaurantId/edit" component={RestaurantEditFormContainer} />
             <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
-            <ProtectedRoute exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+            <ProtectedRoute path="/restaurants/:restaurantId/edit" component={RestaurantEditFormContainer} />
             <ProtectedRoute path="/restaurants/new" component={RestaurantCreateFormContainer} />
+            <ProtectedRoute exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
         </Switch>
 
             <Route exact path="/" component={IndexNavBarContainer} />
