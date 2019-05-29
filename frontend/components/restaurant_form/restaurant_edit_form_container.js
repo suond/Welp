@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {connect} from 'react-redux'
-import {updateRestaurant, fetchRestaurant} from '../../actions/restaurant_actions'
+import {updateRestaurant, fetchRestaurant, clearErrors} from '../../actions/restaurant_actions'
 import RestaurantForm from './restaurant_form'
 
 class RestaurantEditForm extends React.Component {
@@ -17,10 +17,10 @@ class RestaurantEditForm extends React.Component {
     }
 
     render() {
-        const { restaurant, formtype, processData } = this.props;
+        const { restaurant, formtype, processData, errors } = this.props;
         if (!restaurant) return null;
         return (
-            <RestaurantForm formtype={formtype} processData={processData} restaurant={restaurant} />
+            <RestaurantForm formtype={formtype} processData={processData} restaurant={restaurant} errors={errors} />
         ) 
     }
 } 
@@ -30,7 +30,8 @@ const mapStateToProps = (state, ownProps) => {
     
     return {
         restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
-        formtype: "edit"
+        formtype: "edit",
+        errors: state.errors.restaurant
     }
 
 }
@@ -38,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         processData: (restaurant,id) => dispatch(updateRestaurant(restaurant,id)),
-        fetchRestaurant: (id) => dispatch(fetchRestaurant(id))
+        fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

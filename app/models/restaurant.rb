@@ -20,6 +20,9 @@
 
 class Restaurant < ApplicationRecord
 
+    validates  :opening_time, :closing_time, :address, :city, :state, :zipcode, presence: true
+    validates :name, presence: true, length: {minimum: 1}
+
     has_many_attached :photos
 
     belongs_to :owner,

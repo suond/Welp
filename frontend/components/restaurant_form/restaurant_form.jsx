@@ -9,7 +9,19 @@ class RestaurantForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors()
+    }
 
+    renderErrors() {
+        return (
+            <ul className="form-errors">
+                {this.props.errors.map( (err, idx) => {
+                    return <li key={idx}>{err}</li>
+                })}
+            </ul>
+        );
+    }
 
     onChange(field){
         return (e) => {
@@ -50,6 +62,7 @@ class RestaurantForm extends React.Component {
         
         return (
             <div className="restaurant-form-container">
+                {this.renderErrors()}
                 <h2>{this.props.formtype}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <ul>
@@ -57,19 +70,19 @@ class RestaurantForm extends React.Component {
                             <label >
                                 Business Name
                             </label>
-                            <input type="text" value={this.state.name} onChange={this.onChange("name")}/>
+                            <input type="text" value={this.state.name} onChange={this.onChange("name")} placeholder="name"/>
                         </li>
                         <li>
                             <label >
                                 Address
                             </label>
-                            <input type="text" value={this.state.address} onChange={this.onChange("address")}/>
+                            <input type="text" value={this.state.address} onChange={this.onChange("address")} placeholder="address"/>
                         </li>
                         <li>
-                            <label >
+                            <label>
                                 City
                             </label>
-                            <input type="text" value={this.state.city} onChange={this.onChange("city")}/>
+                            <input type="text" value={this.state.city} onChange={this.onChange("city")} placeholder="city"/>
                         </li>
                         <li>
                             <label >
@@ -140,19 +153,19 @@ class RestaurantForm extends React.Component {
                             <label >
                                 ZIP
                             </label>
-                            <input type="text" value={this.state.zipcode} onChange={this.onChange("zipcode")} />
+                            <input type="text" value={this.state.zipcode} onChange={this.onChange("zipcode")} placeholder="zipcode" />
                         </li>
                         <li>
                             <label >
                                 Phone
                             </label>
-                            <input type="text" value={this.state.phone_number} onChange={this.onChange("phone_number")}/>
+                            <input type="text" value={this.state.phone_number} onChange={this.onChange("phone_number")} placeholder="phone_number"/>
                         </li>
                         <li>
                             <label >
                                 Website
                             </label>
-                            <input type="text" value={this.state.website} onChange={this.onChange("website")}/>
+                            <input type="text" value={this.state.website} onChange={this.onChange("website")} placeholder="website"/>
                         </li>
                         <li>
                             <label>

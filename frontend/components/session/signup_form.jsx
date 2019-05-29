@@ -43,7 +43,7 @@ class SessionForm extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="min-height">
                 <FormNavbar />
             <div className="form-all">
                 <section className="form-section-left">

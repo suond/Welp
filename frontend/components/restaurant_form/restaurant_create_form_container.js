@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {createRestaurant} from '../../actions/restaurant_actions'
+import {createRestaurant, clearErrors} from '../../actions/restaurant_actions'
 import RestaurantForm from './restaurant_form'
 const mapStateToProps = state => {
     
@@ -18,14 +18,16 @@ const mapStateToProps = state => {
             closing_time: "7:00 pm",
             photos: [] 
         },
-        formtype: "create"
+        formtype: "create",
+        errors: state.errors.restaurant
     }
 
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        processData: (restaurant) => dispatch(createRestaurant(restaurant))
+        processData: (restaurant) => dispatch(createRestaurant(restaurant)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

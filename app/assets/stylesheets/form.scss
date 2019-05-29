@@ -1,6 +1,10 @@
 .min-height{
     min-height: 80vh;
 }
+.form-errors{
+    color: red
+    
+}
 
 .form-all{
     display: flex;
@@ -30,11 +34,6 @@
                 font-size: 14px;
             }
         }
-    }
-    
-    .form-errors{
-        color: red
-        
     }
     
     h3 {

@@ -12,7 +12,7 @@ const RestaurantShowHeader = (props) => {
                      <Link to={`/restaurants/${restaurant.id}/edit`} className="link-btn show-header">Edit</Link>
                 </div>
                 <div className="show-restaurant-buttons">
-                    <button> add photo</button>
+                    <button>delete button</button>
                 </div>
             </div>
     )
