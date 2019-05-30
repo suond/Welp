@@ -1,3 +1,81 @@
+$yelp-red: #d32323;
+
 .restaurant-form-container{
     min-height: 80vh;
+
+    .restaurant-form-wrapper{
+        padding: 40px;
+    }
+    .restaurant-form-header {
+        color: $yelp-red;
+        font-size: 21px;
+        margin: 10px 0;
+    }
+    label{
+        margin: 0 0 6px 2px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+    }
+    input{
+        width: 370px;
+        display: block;
+        padding: 5px 9px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+        border-radius: 3px;
+        margin: 0 0 18px;
+    }
+    .restaurant-form-state{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    select {
+        background-color: white;
+        width: 370px;
+        border-radius: 3px;
+        padding: 5px 9px;
+        box-shadow: 0 0 4px rgba(0,115,187,0.3);
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .restaurant-form-hours-container{
+        display: flex;
+        flex-direction: column;
+        .hour-select-wrapper {
+            margin-bottom: 12px;
+            select{
+                width: 185px;
+                &:nth-child(2){
+                    margin-left: 20px;
+                }
+            }
+        } 
+    }
+    input[type="file"]{
+        border: none;
+        width: initial;
+    }
+    .restaurant-form-confirm-container{
+        display: flex;
+        align-items: baseline;
+        input[type="submit"]{
+            background: $yelp-red;
+                color: white;
+                border-radius: 3px;
+                font-weight: bold;
+                padding: 10px 13px;
+                font-size: 16px;
+                border: 1px solid #d32323;
+                cursor: pointer;
+                width: 200px;
+        }
+        a{
+            cursor: pointer;
+            margin-left: 20px
+        }
+    }
 }

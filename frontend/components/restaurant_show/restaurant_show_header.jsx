@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom'
 class RestaurantShowHeader extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            showModal: false
-        }
+        
     }
+
+    
 
     render(){
         const restaurant = this.props.restaurant;
@@ -19,7 +19,7 @@ class RestaurantShowHeader extends React.Component{
                          <Link to={`/restaurants/${restaurant.id}/edit`} className="link-btn show-header">Edit</Link>
                     </div>
                     <div className="show-restaurant-buttons">
-                        <button> add photo</button>
+                        
                     </div>
                 </div>
         )

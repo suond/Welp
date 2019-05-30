@@ -28,9 +28,14 @@ const RestaurantShowContent = (props) => {
                         <p>MAP</p>
                     </div>
                     <div className="show-restaurant-address">
-                        <i className="fas fa-map-marker-alt"></i>  {restaurant.address}
+                        <div>
+                            <i className="fas fa-map-marker-alt"></i>  {restaurant.address}
+                        </div>
                         <p>{restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
-                        <p><i className="fas fa-phone"></i>{restaurant.phone_number}</p>
+                        <div>
+                            <i className="fas fa-phone"></i> {restaurant.phone_number}    
+                        </div>
+                        
                         {websiteLink}
 
                     </div>

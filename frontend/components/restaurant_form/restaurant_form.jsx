@@ -1,5 +1,5 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 class RestaurantForm extends React.Component {
 
@@ -62,11 +62,12 @@ class RestaurantForm extends React.Component {
         
         return (
             <div className="restaurant-form-container min-height">
+                <div className="restaurant-form-wrapper">
                 {this.renderErrors()}
-                <h2>{this.props.formtype}</h2>
+                <h2 className="restaurant-form-header">{this.props.formtype}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <ul>
-                        <li>
+                        <li className="restaurant-form-input">
                             <label >
                                 Business Name
                             </label>
@@ -84,7 +85,7 @@ class RestaurantForm extends React.Component {
                             </label>
                             <input type="text" value={this.state.city} onChange={this.onChange("city")} placeholder="city"/>
                         </li>
-                        <li>
+                        <li className="restaurant-form-state">
                             <label >
                                 State
                             </label>
@@ -159,7 +160,7 @@ class RestaurantForm extends React.Component {
                             <label >
                                 Phone
                             </label>
-                            <input type="text" value={this.state.phone_number} onChange={this.onChange("phone_number")} placeholder="phone_number"/>
+                            <input type="text" value={this.state.phone_number} onChange={this.onChange("phone_number")} placeholder="#(800)-272-3354"/>
                         </li>
                         <li>
                             <label >
@@ -167,29 +168,53 @@ class RestaurantForm extends React.Component {
                             </label>
                             <input type="text" value={this.state.website} onChange={this.onChange("website")} placeholder="http://"/>
                         </li>
-                        <li>
+                        <li className="restaurant-form-hours-container">
                             <label>
                                 Hours
                             </label>
+                            <div className="hour-select-wrapper">
                             <select name="opening" id="" onChange={this.onChange("opening_time")} value={this.state.opening_time}>
+                                <option value="06:00 am">06:00 am</option>
                                 <option value="07:00 am">07:00 am</option>
                                 <option value="08:00 am">08:00 am</option>
                                 <option value="09:00 am">09:00 am</option>
-                            </select> --- 
+                                <option value="10:00 am">10:00 am</option>
+                                <option value="11:00 am">11:00 am</option>
+                                <option value="12:00 pm">12:00 pm</option>
+                                <option value="01:00 pm">01:00 pm</option>
+                                <option value="02:00 pm">02:00 pm</option>
+                                <option value="03:00 pm">03:00 pm</option>
+                                <option value="04:00 pm">04:00 pm</option>
+                            </select> 
                             <select name="closing" id="" onChange={this.onChange("closing_time")} value={this.state.closing_time}>
+                            <option value="06:00 am">06:00 am</option>
+                                <option value="07:00 am">07:00 am</option>
+                                <option value="08:00 am">08:00 am</option>
+                                <option value="09:00 am">09:00 am</option>
+                                <option value="10:00 am">10:00 am</option>
+                                <option value="11:00 am">11:00 am</option>
+                                <option value="12:00 pm">12:00 pm</option>
+                                <option value="01:00 pm">01:00 pm</option>
+                                <option value="02:00 pm">02:00 pm</option>
+                                <option value="03:00 pm">03:00 pm</option>
+                                <option value="04:00 pm">04:00 pm</option>
                                 <option value="07:00 pm">07:00 pm</option>
                                 <option value="08:00 pm">08:00 pm</option>
                                 <option value="09:00 pm">09:00 pm</option>
                             </select>
+                            </div>
                         </li>
                         <li>
                             <label>Photos (add multiples photos at once)</label>
                             <input type="file" onChange={e => this.setState({photos: e.target.files })} multiple />
                         </li>
                     </ul>
-                    <input type="submit" value={`${this.props.formtype} restaurant`}/>
+                    <div className="restaurant-form-confirm-container">
+                        <input type="submit" value={`${this.props.formtype} restaurant`}/>
+                        <Link to="/restaurants"> cancel</Link>
+                    </div>
                 </form>
-
+                </div>
             </div>
         )
     }
