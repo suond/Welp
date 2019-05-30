@@ -18,7 +18,7 @@ const mapStateToProps = state => {
             closing_time: "7:00 pm",
             photos: [] 
         },
-        formtype: "create",
+        formtype: "Create",
         errors: state.errors.restaurant
     }
 

@@ -6,7 +6,8 @@ import {fetchRestaurant, deleteRestaurant} from '../../actions/restaurant_action
 const mapStateToProps = (state, ownProps) => {
     
     return {
-        restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
+        restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
+        currentUserId: state.session.currentUserId
     }
 }
 

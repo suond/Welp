@@ -35,7 +35,7 @@ const mapStateToProps = (state, ownProps) => {
     }
     return {
         restaurant: rest,
-        formtype: "edit",
+        formtype: "Edit",
         errors: state.errors.restaurant
     }
 

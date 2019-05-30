@@ -31,7 +31,7 @@ class Api::RestaurantsController < ApplicationController
 
 
     def destroy
-        @restaurant = Event.find(params[:id])
+        @restaurant = Restaurant.find(params[:id])
         @restaurant.destroy
 
         render :show

@@ -126,3 +126,15 @@
         transition: color 0.5s, border 0.5s;
     }
 }
+
+.delete-initializer{
+    padding: 5px 9px;
+    border: 1px solid darkred;
+    border-radius: 6px;
+    color: white;
+    background-color: red;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+

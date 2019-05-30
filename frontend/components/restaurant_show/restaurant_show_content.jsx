@@ -19,7 +19,13 @@ const RestaurantShowContent = (props) => {
     }
     let websiteLink = null;
     if (restaurant.website){
-        websiteLink = <a href={restaurant.website}>{restaurant.website}</a>;
+        if (restaurant.website.substring(0,8) === "https://"){
+            websiteLink = <a href={restaurant.website}>{restaurant.website}</a>;    
+        } else {
+            let webLink = "https://"+ restaurant.website;
+            websiteLink = <a href={webLink}>{webLink}</a>
+        }
+        
     }
     return (
         <div className="show-restaurant-content">
@@ -29,11 +35,11 @@ const RestaurantShowContent = (props) => {
                     </div>
                     <div className="show-restaurant-address">
                         <div>
-                            <i className="fas fa-map-marker-alt"></i>  {restaurant.address}
+                            <i className="fas fa-map-marker-alt"></i> <span>{restaurant.address}</span>
                         </div>
                         <p>{restaurant.city}, {restaurant.state} {restaurant.zipcode}</p>
                         <div>
-                            <i className="fas fa-phone"></i> {restaurant.phone_number}    
+                            <i className="fas fa-phone"></i> <span>{restaurant.phone_number}</span>    
                         </div>
                         
                         {websiteLink}

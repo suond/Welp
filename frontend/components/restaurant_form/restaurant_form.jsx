@@ -43,7 +43,7 @@ class RestaurantForm extends React.Component {
             }
         })
         
-        if(this.props.formtype === 'edit'){
+        if(this.props.formtype === 'Edit'){
             this.props.processData(formData, this.props.restaurant.id)
             .then( restaurant=> {
                  
