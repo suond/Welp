@@ -61,7 +61,7 @@ class RestaurantForm extends React.Component {
     render() {
         
         return (
-            <div className="restaurant-form-container">
+            <div className="restaurant-form-container min-height">
                 {this.renderErrors()}
                 <h2>{this.props.formtype}</h2>
                 <form onSubmit={this.handleSubmit}>
@@ -88,7 +88,7 @@ class RestaurantForm extends React.Component {
                             <label >
                                 State
                             </label>
-                            <select onChange={this.onChange("state")} value={this.props.state}>
+                            <select onChange={this.onChange("state")} value={this.state.state}>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AS">American Samoa</option>
@@ -165,21 +165,21 @@ class RestaurantForm extends React.Component {
                             <label >
                                 Website
                             </label>
-                            <input type="text" value={this.state.website} onChange={this.onChange("website")} placeholder="website"/>
+                            <input type="text" value={this.state.website} onChange={this.onChange("website")} placeholder="http://"/>
                         </li>
                         <li>
                             <label>
                                 Hours
                             </label>
                             <select name="opening" id="" onChange={this.onChange("opening_time")} value={this.state.opening_time}>
-                                <option value="7:00 am">7:00 am</option>
-                                <option value="8:00 am">8:00 am</option>
-                                <option value="9:00 am">9:00 am</option>
+                                <option value="07:00 am">07:00 am</option>
+                                <option value="08:00 am">08:00 am</option>
+                                <option value="09:00 am">09:00 am</option>
                             </select> --- 
                             <select name="closing" id="" onChange={this.onChange("closing_time")} value={this.state.closing_time}>
-                                <option value="7:00 pm">7:00 pm</option>
-                                <option value="8:00 pm">8:00 pm</option>
-                                <option value="9:00 pm">9:00 pm</option>
+                                <option value="07:00 pm">07:00 pm</option>
+                                <option value="08:00 pm">08:00 pm</option>
+                                <option value="09:00 pm">09:00 pm</option>
                             </select>
                         </li>
                         <li>
