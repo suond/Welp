@@ -6,16 +6,22 @@ import GoogleMapDisplay from './google_map'
 
 const RestaurantShowContent = (props) => {
     const restaurant = props.restaurant;
-
-    // const photoItems = restaurant.photoUrl.map((url,idx) => {
-    //     return (
-    //         <RestaurantShowPhotoItem url={url} key={idx}/>
-    //     )
-    // })
+    let photoItems = null;
     if (restaurant.photoUrl.length > 3) {
         //render the collage with the 4 images in a block
+        photoItems = (
+            <>
+                <RestaurantShowPhotoItem url={restaurant.photoUrl[0]} />
+                <RestaurantShowPhotoItem url={restaurant.photoUrl[1]} />
+                <RestaurantShowPhotoAll photos={restaurant.photoUrl} />
+            </>
+        )
     } else {
-        //just render a showphotoitem
+         photoItems = restaurant.photoUrl.map((url,idx) => {
+        return (
+            <RestaurantShowPhotoItem url={url} key={idx}/>
+        )
+    })
     }
     let websiteLink = null;
     if (restaurant.website){
@@ -45,9 +51,7 @@ const RestaurantShowContent = (props) => {
                     </div>
                 </div>
                 <div className="show-photo-collection">
-                    <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
-                    <RestaurantShowPhotoItem url={props.restaurant.photoUrl[0]}/>
-                    <RestaurantShowPhotoAll photos={props.restaurant.photoUrl} />
+                    {photoItems}
                 </div>
             </div>
     )

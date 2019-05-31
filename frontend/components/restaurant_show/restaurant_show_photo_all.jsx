@@ -6,11 +6,11 @@ const RestaurantShowPhotoAll = (props) => {
         <div className="show-photo-collage show-photo-div relative">
             <div className="img-div-two">
                 <img src={arrs_photos[0]} alt=""/>
-                <img src={arrs_photos[0]} alt=""/>
+                <img src={arrs_photos[1]} alt=""/>
             </div>
             <div className="img-div-two">
-                <img src={arrs_photos[0]} alt=""/>
-                <img src={arrs_photos[0]} alt=""/>
+                <img src={arrs_photos[2]} alt=""/>
+                <img src={arrs_photos[3]} alt=""/>
             </div>
             <span className="span-cover-collage"><i className="fas fa-th-large"></i> All the photos</span> 
         </div>
