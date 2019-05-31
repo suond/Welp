@@ -16,6 +16,7 @@ import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_f
 import RestaurantEditFormContainer from './restaurant_form/restaurant_edit_form_container'
 
 
+
 const App = (props) => {
     
     return (
@@ -33,7 +34,7 @@ const App = (props) => {
             <Route exact path="/" component={IndexContentContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
-
+            
         </div>
             <footer id="foot">
                 <div>

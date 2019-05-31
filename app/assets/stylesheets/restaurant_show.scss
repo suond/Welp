@@ -18,18 +18,16 @@
         justify-content: space-between;
         .show-restaurant-location-detail{
             border: 1px solid lightgray;
-            padding: 10px;
             font-size: 14px;
-            width: 250px;
-        }
-        .gMap-show{
-            height: 135px;
-            border: 1px solid lightgray;
-            margin: 5px 0;
             
         }
+        
         .show-restaurant-address{
             height: auto;
+            padding: 12px;
+            *{
+                margin: 2px 0;
+            }
             i{
                 height: 100%;
             }

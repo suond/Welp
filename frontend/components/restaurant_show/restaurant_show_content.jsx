@@ -1,8 +1,8 @@
 import React from 'react'
 import RestaurantShowPhotoItem from './restaurant_show_photo_item';
 import RestaurantShowPhotoAll from './restaurant_show_photo_all'
+import GoogleMapDisplay from './google_map'
 
-import {Link} from 'react-router-dom'
 
 const RestaurantShowContent = (props) => {
     const restaurant = props.restaurant;
@@ -30,9 +30,7 @@ const RestaurantShowContent = (props) => {
     return (
         <div className="show-restaurant-content">
                 <div className="show-restaurant-location-detail">
-                    <div className="gMap-show">
-                        <p>MAP</p>
-                    </div>
+                <GoogleMapDisplay />
                     <div className="show-restaurant-address">
                         <div>
                             <i className="fas fa-map-marker-alt"></i> <span>{restaurant.address}</span>
