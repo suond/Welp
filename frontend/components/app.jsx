@@ -9,7 +9,8 @@ import LoginFormContainer from './session/login_form_container'
 import IndexNavBarContainer from './greeting/index_navbar_container'
 import UserNavBar from '../components/greeting/user_navbar_container'
 
-import IndexContentContainer from './ui/index_content_container'
+// import IndexContentContainer from './ui/index_content_container'
+import Splash from './ui/splash'
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import RestaurantShowContainer from './restaurant_show/restaurant_show_container'
 import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
@@ -31,7 +32,7 @@ const App = (props) => {
         </Switch>
 
             <Route exact path="/" component={IndexNavBarContainer} />
-            <Route exact path="/" component={IndexContentContainer} />
+            <Route exact path="/" component={Splash} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
             <AuthRoute exact path="/login" component={LoginFormContainer} redirect="/restaurants"/>
             

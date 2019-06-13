@@ -1,0 +1,60 @@
+.index-upper{
+    background-image: image-url('index_bg.jpg');
+    height: 550px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .index-search-wrapper{
+        background: white;
+        border: 1px solid black;
+        border-radius: 3px;
+        form{
+            display:flex;
+            div{
+                background: white;
+                span{
+                    padding: 5px;
+                }
+            }
+            
+            button{
+                background-color: red;
+                border: none;
+                border-radius: 3px;
+                padding: 12px;
+                cursor: pointer;
+                &:hover {
+                    background: #7c0f22;
+                    transition: background-color 0.4s;
+                }
+                span{
+                    padding: 5px;
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+
+.index-big-logo{
+    background-image: image-url('yelp_logo.png');
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 160px;
+}
+
+.index-search-input{
+    padding: 12px;
+    border:none;
+    
+    &:focus{
+        outline: none;
+    }
+}
