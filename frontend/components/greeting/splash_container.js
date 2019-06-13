@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
 import { logout } from '../../actions/session_actions'
 
-import IndexNavBar from '../ui/index_navbar';
-
+// import IndexNavBar from '../ui/index_navbar';
+import Splash from '../ui/splash'
 const mapStateToProps = (state, ownProps) => {
     const cUser = state.entities.users[state.session.currentUserId]
     
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(IndexNavBar)
+export default connect(mapStateToProps,mapDispatchToProps)(Splash)

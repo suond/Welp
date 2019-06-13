@@ -1,9 +1,13 @@
-.index-upper{
+.splash-container {
     background-image: image-url('index_bg.jpg');
-    height: 550px;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
+    
+}
+
+.index-upper{
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
