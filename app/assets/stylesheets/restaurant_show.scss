@@ -1,7 +1,14 @@
+.bg-ghostwhite{
+    background-color: ghostwhite;
+}
+
 .show-content-container{
     padding: 40px;
     background-color: ghostwhite;
     min-height: 80vh;
+    margin: 0 auto;
+    max-width: 1000px;
+    box-sizing: border-box;
     h1{
         font-size: 36px;
     }

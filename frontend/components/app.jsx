@@ -47,7 +47,7 @@ const App = (props) => {
                 <div className="footer-img">
 
                 </div>
-                <small className="foot-copyright">Copyright © 2004–2019 Yelp Inc. Yelp </small>
+                <small className="foot-copyright">Copyright © 2019–2019 Welp Inc. Welp </small>
             </footer>
             </>
     )

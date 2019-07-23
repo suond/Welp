@@ -34,4 +34,10 @@ restPho.photos.attach(io: pho2, filename: "pho2.jpg")
 condi = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/condiments.jpg')
 restPho.photos.attach(io: condi, filename: "condiments.jpg")
 
+# create a total of 6 restaurants, one for ice cream, one for tacos, one for chinese, and one for smoothies
+restIce = Resaurant.create!(owner_id: 2, location_id: 2, name: "Eye Scream", opening_time: "9:00 am", closing_time: "7:30 pm", address: "1234 not a real address", city: "Redwood", state: "CA", zipcode: "23456", phone_number: "209-093-5656", website: "https://eyescream.com")
+
+
+#location
 Location.create!(lat: 0.0, lng: 0.0, restaurant_id: 1)
+Location.create!(lat: -100.0, lng: 50.0, restaurant_id: 2)
