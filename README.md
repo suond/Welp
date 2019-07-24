@@ -4,6 +4,8 @@
 
 A Yelp clone which allows users of the site to advertise their restaurant.  The site uses Rails as a backend to return JSON data and a static page with react-redux for quick loading times.
 
+![alt text](app/assets/screenshots/sc_welp_1.png)
+
 ---
 
 ## Features
@@ -60,8 +62,11 @@ Errors persisting when switching pages was an issue, but it was an easy fix by a
 ---
 
 ## Restaurant CRUD
+![alt text](app/assets/screenshots/sc_welp_create_2.png)
 
 The creations of restaurants and the ability to create, show, edit, and update as need is the most important feature of cloning Yelp, it's what Yelp itself does!  Welp itself has basic CRUD functionality for restaurants, although not quite as in-depth as Yelp itself.  User can create a restaurant, edit any existing restaurant, and if the current user is the owner of the restaurant, has the option to remove it from the Welp with the click of a button.
+
+![alt text](app/assets/screenshots/sc_welp_show_3.png)
 
 One of the biggest issues for me here was parsing the hours portion of my restaurant model to grab only the relevant part of it (the hours and minutes), as well as translating army time into general time.  StackOverflow came through and gave a very clean way to display the correct information I needed:
 
