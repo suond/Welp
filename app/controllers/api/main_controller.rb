@@ -1,4 +1,4 @@
-class MainController < ApplicationController
+class Api::MainController < ApplicationController
 
 
     before_action :force_json, only: :search

@@ -20,7 +20,7 @@ class Splash extends React.Component{
         this.setState({
           term: e.target.value
         }, () => {
-          $.getJSON('/search?q=' + this.state.term)
+          $.getJSON('/api/search?q=' + this.state.term)
             .then(response => this.setState({ autoCompleteResults: response.items }))
         });
       }
