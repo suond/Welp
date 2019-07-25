@@ -16,7 +16,7 @@ export const fetchRestaurant = (id) =>{
 export const searchRestaurant = (q) => {
     return $.ajax({
         method: "GET",
-        url: `/search/${q}`
+        url: `/api/search?q=${q}`
     })
 }
 

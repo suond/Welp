@@ -7,7 +7,7 @@ class Api::MainController < ApplicationController
   
     def search
       if params[:q].length > 0
-        @items = Restaurant.ransack(name_cont: params[:q]).result(distinct: true).limit(5)
+        @items = Restaurant.ransack(name_cont: params[:q]).result(distinct: true)
       end
     end
   

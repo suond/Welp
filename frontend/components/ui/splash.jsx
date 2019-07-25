@@ -16,12 +16,21 @@ class Splash extends React.Component{
         // .then(response => this.setState( {autoCompleteResults: response.items}))
     }
 
+    componentDidMount(){
+        
+    }
+
     getAutoCompleteResults(e){
         this.setState({
           term: e.target.value
         }, () => {
-          $.getJSON('/api/search?q=' + this.state.term)
-            .then(response => this.setState({ autoCompleteResults: response.items }))
+        //   $.getJSON('/api/search?q=' + this.state.term)
+        //     .then(response => this.setState({ autoCompleteResults: response.items }))
+        this.props.fetchSearchRestaurants(this.state.term)
+        .then(response => {
+            
+            return this.setState({ autoCompleteResults: response.restaurants.items})
+            })
         });
       }
 
