@@ -2,9 +2,10 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 
 const Greeting = (props) => {
+    
     const cUser = props.currentUser
     const logout = props.logout;
-    const transparent = {backgroundColor: 'transparent'}
+    const transparent = props.path === "/" ? {backgroundColor: 'transparent'} : null
     const display =  ( 
                 <div className="right-nav-item">
                     <ul>

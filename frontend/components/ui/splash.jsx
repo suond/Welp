@@ -14,10 +14,16 @@ class Splash extends React.Component{
 
         // $.getJSON('/search?q=' + this.state.term)
         // .then(response => this.setState( {autoCompleteResults: response.items}))
+        this.handleSubmit = this.handleSubmit.bind(this)
+        
     }
 
-    componentDidMount(){
-        
+    handleSubmit(e) {
+        e.preventDefault();
+
+        let url = `/search/${this.state.term}`
+        // console.log(url)
+        this.props.history.push(url)
     }
 
     getAutoCompleteResults(e){
@@ -50,7 +56,7 @@ class Splash extends React.Component{
         </ul>
         return (
         <div className="splash-container">
-            <IndexNavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+            <IndexNavBar currentUser={this.props.currentUser} logout={this.props.logout} path={this.props.match.path}/>
             <div className="index-upper">
                 <Link to="/">
                     <div className="index-big-logo">
@@ -59,14 +65,14 @@ class Splash extends React.Component{
                 </Link>
                 <div className="index-search-wrapper">
     
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className="search-find-wrapper">
                             <span>Find</span>
                             <input type="text" ref={ (input) => {this.searchBar = input} } 
                             value={this.state.term} 
                             onChange={this.getAutoCompleteResults.bind(this) }
                             className="index-search-input"/>
-                            <div className="auto-complete-res hidden">
+                            <div className="auto-complete-res ">
                                 {autoCompleteList}
                             </div>
                         </div>
@@ -76,7 +82,7 @@ class Splash extends React.Component{
                             <span>Near</span>
                             <input type="text" placeholder="Looking for a spolusing?" className="index-search-input"/>
                         </div> */}
-                        <button>
+                        <button type="submit">
                             <span><i className="fas fa-search"></i></span>
                         </button>
                     </form>

@@ -19,10 +19,11 @@ class UserNavBar extends React.Component{
     }
 
     render(){
+        
         const cUser = this.props.currentUser;
         const logout = this.props.logout;
         const avatar = cUser.photoUrl || window.icon_url;
-        const transparentClass = !this.props.history ? {backgroundColor: 'transparent'} : null;
+        const transparentClass = this.props.path === "/" ? {backgroundColor: 'transparent'} : null;
         
         return (
             <header>
