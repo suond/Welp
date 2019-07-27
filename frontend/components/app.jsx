@@ -15,7 +15,7 @@ import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import RestaurantShowContainer from './restaurant_show/restaurant_show_container'
 import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
 import RestaurantEditFormContainer from './restaurant_form/restaurant_edit_form_container'
-
+import SearchResult from './search/search_container'
 
 
 const App = (props) => {
@@ -30,7 +30,7 @@ const App = (props) => {
             <ProtectedRoute path="/restaurants/new" component={RestaurantCreateFormContainer} />
             <ProtectedRoute exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
         </Switch>
-
+            <Route exact path="/search/:query" component={SearchResult} />
             {/* <Route exact path="/" component={IndexNavBarContainer} /> */}
             <Route exact path="/" component={SplashContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} redirect="/restaurants" />
@@ -47,7 +47,7 @@ const App = (props) => {
                 <div className="footer-img">
 
                 </div>
-                <small className="foot-copyright">Copyright © 2004–2019 Yelp Inc. Yelp </small>
+                <small className="foot-copyright">Copyright © 2019–2019 Welp Inc. Welp </small>
             </footer>
             </>
     )

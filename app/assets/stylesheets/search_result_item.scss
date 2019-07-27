@@ -1,0 +1,37 @@
+.search-res-item-container{
+    display: flex;
+    .search-res-icon{
+        height: 175px;
+        width: 175px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+    .search-result-after-img{
+        width: 100%;
+        .upper-search-result {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    }
+    
+}
+
+.show-result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    max-width: 1000px;
+}
+
+.search-result-ul{
+    width: 80%;
+}
+
+.eight-vh {
+    height: 80vh;
+}

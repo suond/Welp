@@ -20,6 +20,13 @@ const receiveRestaurant = restaurant => {
     }
 }
 
+const receiveSearchRestaurants = restaurants => {
+    return {
+        type: RECEIVE_ALL_RESTAURANTS,
+        restaurants
+    }
+}
+
 const removeRestaurant = restaurant => {
     return {
         type: REMOVE_RESTAURANT,
@@ -61,6 +68,15 @@ export const updateRestaurant = (restaurant, id) => dispatch => {
     .then(restaurant => dispatch(receiveRestaurant(restaurant)),
      err => dispatch(receiveRestaurantErrors(err.responseJSON))
     )
+}
+
+export const fetchSearchRestaurants = (query) => dispatch => {
+    return APIUtils.searchRestaurant(query)
+    .then(restaurants => {
+        
+        return dispatch(receiveSearchRestaurants(restaurants))
+    
+    })
 }
 
 export const deleteRestaurant = id => dispatch => {

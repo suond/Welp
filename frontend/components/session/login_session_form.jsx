@@ -48,7 +48,7 @@ class SessionForm extends React.Component{
 
     dummySubmitButton() {
         return (
-            <button onClick={this.handleDummySubmit} className="form-btn">Dummy Account</button>
+            <button onClick={this.handleDummySubmit} className="form-btn">Demo Account</button>
         )
     }
 

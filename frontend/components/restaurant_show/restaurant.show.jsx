@@ -50,14 +50,15 @@ class RestaurantShow extends React.Component{
         const displayC =  <RestaurantShowContent restaurant={restaurant}/> 
 
         const displayHours =  <RestaurantShowHours restaurant={restaurant}/> 
-
+        
         return (
-            <div>
+            <div className="bg-ghostwhite">
                 
                 <div className="show-content-container">
                     {displayH}
                     {displayC}
                     {displayHours}
+                    
                 </div>
             </div>
         );

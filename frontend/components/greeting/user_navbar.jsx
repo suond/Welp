@@ -19,10 +19,11 @@ class UserNavBar extends React.Component{
     }
 
     render(){
+        
         const cUser = this.props.currentUser;
         const logout = this.props.logout;
         const avatar = cUser.photoUrl || window.icon_url;
-        const transparentClass = !this.props.history ? {backgroundColor: 'transparent'} : null;
+        const transparentClass = this.props.path === "/" ? {backgroundColor: 'transparent'} : null;
         
         return (
             <header>
@@ -32,6 +33,7 @@ class UserNavBar extends React.Component{
                                             
                         </div>
                     </Link>
+                    <Link to="/restaurants">All Restaurants</Link>
                     <div className="user-modal-container">
                     <div className="user-modal" onClick={this.handleModalClick}>
                         <img src={avatar} alt="not found" id="user-avatar"/>
