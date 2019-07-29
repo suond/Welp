@@ -70,9 +70,9 @@ class SessionForm extends React.Component{
                         <input type="text" placeholder="Email" onChange={this.update("email")} className="input-blue"/>
                         <input type="password" placeholder="Password" onChange={this.update("password")} className="input-blue"/>
                         <div className="align-self-right">
-                            <small>
+                            {/* <small>
                                 <a href="#">Forgot password?</a>                  
-                            </small>
+                            </small> */}
                         </div>
                         <input type="submit" value="Log In" className="form-btn"/>
                         <small className="small-swap-text">New to Welp? <Link to="/signup">Sign Up</Link> </small>

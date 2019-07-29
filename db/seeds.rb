@@ -34,10 +34,96 @@ restPho.photos.attach(io: pho2, filename: "pho2.jpg")
 condi = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/condiments.jpg')
 restPho.photos.attach(io: condi, filename: "condiments.jpg")
 
-# create a total of 6 restaurants, one for ice cream, one for tacos, one for chinese, and one for smoothies
-restIce = Restaurant.create!(owner_id: 2, location_id: 2, name: "Eye Scream", opening_time: "9:00 am", closing_time: "7:30 pm", address: "1234 not a real address", city: "Redwood", state: "CA", zipcode: "23456", phone_number: "209-093-5656", website: "https://eyescream.com")
+
+restIce1 = Restaurant.create!(owner_id: 2, location_id: 3, name: "Eye Scream", opening_time: "9:00 am", closing_time: "7:30 pm", address: "1234 not a real address", city: "Redwood", state: "CA", zipcode: "23456", phone_number: "209-093-5656", website: "https://eyescream.com")
+#photo 1 and photo 2 ice
+strawberry_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/strawberry_ice.jpg')
+restIce1.photos.attach(io: strawberry_ice, filename: "strawberry_ice.jpg")
+vanilla_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/vanilla_ice.jpg')
+restIce1.photos.attach(io: vanilla_ice, filename: "vanilla_ice.jpg")
+
+restTaco1 = Restaurant.create!(owner_id: 1, location_id: 2, name: "4 Taco", opening_time: "9:00 am", closing_time: "7:30 pm", address: "4321 not a real address", city: "Pleasanton", state: "CA", zipcode: "34567", phone_number: "209-093-3324", website: "https://taco.com")
+#photo 1 and photo 2 taco
+taco_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/taco_1.png')
+restTaco1.photos.attach(io: taco_1, filename: "taco_1.jpg")
+taco_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/taco_2.png')
+restTaco1.photos.attach(io: taco_2, filename: "taco_2.jpg")
+
+
+restIndian = Restaurant.create!(owner_id: 2, location_id: 2, name: "Curray", opening_time: "9:00 am", closing_time: "9:00 pm", address: "4321 Curry Street", city: "Los Angeles", state: "CA", zipcode: "45678", phone_number: "818-123-3324", website: "https://curray.com")
+#photo1
+curry1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/curry_1.png')
+restIndian.photos.attach(io: curry1, filename: "curry1.jpg")
+
+
+restNacho = Restaurant.create!(owner_id: 1, location_id: 2, name: "Chip N Cheese", opening_time: "10:00 am", closing_time: "9:00 pm", address: "1111 Nacho Street", city: "Stockton", state: "CA", zipcode: "23123", phone_number: "209-123-1122", website: "https://nanaco.com")
+#photo1 nacho
+nacho1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/nacho_1.png')
+restNacho.photos.attach(io: nacho1, filename: "nacho1.jpg")
+
+
+
+restSteak = Restaurant.create!(owner_id: 2, location_id: 2, name: "FSteak", opening_time: "10:00 am", closing_time: "9:00 pm", address: "In Inaba", city: "Inaba", state: "JP", zipcode: "23123", phone_number: "000-123-1122", website: "https://FSteak.com")
+#photo1 steak and photo2 steak
+steak_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/steak_1.png')
+restSteak.photos.attach(io: steak_1, filename: "steak_1.jpg")
+steak_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/steak_2.png')
+restSteak.photos.attach(io: steak_2, filename: "steak_2.jpg")
+
+
+restSmoothie = Restaurant.create!(owner_id: 2, location_id: 2, name: "Blended", opening_time: "9:00 am", closing_time: "8:00 pm", address: "Bam a Lam", city: "Dover", state: "DE", zipcode: "43324", phone_number: "000-123-1121", website: "https://willitblend.com")
+#photo1 smooth and photo2 smooth
+smoothie_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/smoothie_1.png')
+restSmoothie.photos.attach(io: smoothie_1, filename: "smoothie_1.jpg")
+smoothie_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/smoothie_2.png')
+restSmoothie.photos.attach(io: smoothie_2, filename: "smoothie_2.jpg")
+
+
+restCookie = Restaurant.create!(owner_id: 2, location_id: 2, name: "Circle Ahoy", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1515 Degree Ave", city: "Dover", state: "DE", zipcode: "43324", phone_number: "000-123-1021", website: "https://circlesnack.com")
+cookie_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/cookie_1.png')
+restCookie.photos.attach(io: cookie_1, filename: "cookie_1.jpg")
+cookie_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/cookie_2.png')
+restCookie.photos.attach(io: cookie_2, filename: "cookie_2.jpg")
+
+restBurger2 = Restaurant.create!(owner_id: 2, location_id: 2, name: "Pattie Crab", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1515 Degree Ave", city: "San Fransico", state: "CA", zipcode: "43221", phone_number: "023-123-1021", website: "https://patty.com")
+burger2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/burger2.jpg')
+restBurger2.photos.attach(io: burger2, filename: "burger2.jpg")
+
+##start uploading here##
+restBurrito = Restaurant.create!(owner_id: 2, location_id: 2, name: "Zel Grillito", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "New Lolzy", state: "CA", zipcode: "43221", phone_number: "023-123-1021", website: "https://zelritto.com")
+burrito1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/burrito1.png')
+restBurrito.photos.attach(io: burrito1, filename: "burrito1.jpg")
+
+restShake = Restaurant.create!(owner_id: 2, location_id: 2, name: "Shake Me", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "New Lolzy", state: "CA", zipcode: "43221", phone_number: "023-123-1021", website: "https://ShakeMe.com")
+shake_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/shake_1.png')
+restShake.photos.attach(io: shake_1, filename: "shake_1.jpg")
+
+restPizza = Restaurant.create!(owner_id: 2, location_id: 2, name: "Pizza Tho", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "New Lolzy", state: "CA", zipcode: "43221", phone_number: "023-123-1021", website: "https://pizzatho.com")
+pizza_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/pizza_1.png')
+restPizza.photos.attach(io: pizza_1, filename: "pizza_1.jpg")
+
+restPizza2 = Restaurant.create!(owner_id: 1, location_id: 2, name: "C^2", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "Denver", state: "CO", zipcode: "43221", phone_number: "023-123-1021", website: "https://cc2.com")
+pizza_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/pizza_2.png')
+restPizza2.photos.attach(io: pizza_2, filename: "pizza_2.jpg")
+
+restPasta = Restaurant.create!(owner_id: 1, location_id: 2, name: "Ma Spagehetti", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "Denver", state: "CO", zipcode: "43221", phone_number: "023-123-1021", website: "https://cc2.com")
+pasta_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/pasta_1.png')
+restPasta.photos.attach(io: pasta_1, filename: "pasta_1.jpg")
+
+restRib = Restaurant.create!(owner_id: 1, location_id: 2, name: "RibRibRib", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "Dallas", state: "TX", zipcode: "43221", phone_number: "023-123-1021", website: "https://ribx3.com")
+rib_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/rib_1.png')
+restRib.photos.attach(io: rib_1, filename: "rib_1.jpg")
+
+restFriedChicken = Restaurant.create!(owner_id: 1, location_id: 2, name: "Battered Chicken", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1234 Another Address", city: "Dallas", state: "TX", zipcode: "43221", phone_number: "023-123-1021", website: "https://batteredchicken.com")
+friedC = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/friedC_1.png')
+restFriedChicken.photos.attach(io: friedC, filename: "friedC.jpg")
+
+restBar = Restaurant.create!(owner_id: 1, location_id: 2, name: "Brew and Booze", opening_time: "10:00 am", closing_time: "11:00 pm", address: "2222 Another Address", city: "Dallas", state: "TX", zipcode: "43221", phone_number: "023-123-1021", website: "https://brewbooze.com")
+beer_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/beer_1.png')
+restBar.photos.attach(io: beer_1, filename: "beer_1.jpg")
 
 
 #location
 Location.create!(lat: 0.0, lng: 0.0, restaurant_id: 1)
 Location.create!(lat: -100.0, lng: 50.0, restaurant_id: 2)
+Location.create!(lat: -150.0, lng: 70.0, restaurant_id: 3)

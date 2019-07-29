@@ -29,9 +29,7 @@ class Restaurant < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-    has_one :location,
-    foreign_key: :location_id,
-    class_name: :Location
+    
 
     def opening_time_str
         self.opening_time.strftime("%I:%M %P")
