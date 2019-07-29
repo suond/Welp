@@ -33,7 +33,7 @@ class SearchResult extends React.Component{
     render() {
         
         return (
-            <div className="eight-vh">
+            <div className="">
             <IndexNavBar currentUser={this.props.currentUser} logout={this.props.logout} path={this.props.match.path}/>
                 <div className="show-result-container">
                     {this.renderSearchResult()}
