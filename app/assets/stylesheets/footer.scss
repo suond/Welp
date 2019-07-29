@@ -4,8 +4,7 @@
     width: 100%;
     border-top: 1px solid lightgray;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
+    
     
     h3{
         color: red;
@@ -30,4 +29,8 @@
         display: block;
         margin-top: 7px;
     }
+}
+
+.content {
+    min-height: 74vh;
 }

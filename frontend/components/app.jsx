@@ -22,7 +22,7 @@ const App = (props) => {
     
     return (
         <>
-        <div>
+        <div className="content">
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
         <Switch>
             <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
