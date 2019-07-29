@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         store = configureStore();
     }
 //testing
-    window.login = login;
-    window.state = store.getState;
-    window.dispatch = store.dispatch;
-    window.fetchRestaurants = fetchRestaurants;
-    window.fetchRestaurant = fetchRestaurant;
-    window.createRestaurant = createRestaurant;
-    window.fetchSearch = fetchSearchRestaurants;
+    // window.login = login;
+    // window.state = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.fetchRestaurants = fetchRestaurants;
+    // window.fetchRestaurant = fetchRestaurant;
+    // window.createRestaurant = createRestaurant;
+    // window.fetchSearch = fetchSearchRestaurants;
 
 //end
     ReactDOM.render(<Root store={store}/>, root)
