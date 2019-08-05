@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_180825) do
+ActiveRecord::Schema.define(version: 2019_08_05_191552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,18 +53,8 @@ ActiveRecord::Schema.define(version: 2019_05_27_180825) do
     t.index ["restaurant_id"], name: "index_hours_on_restaurant_id"
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.float "lat", null: false
-    t.float "lng", null: false
-    t.integer "restaurant_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_locations_on_restaurant_id"
-  end
-
   create_table "restaurants", force: :cascade do |t|
     t.integer "owner_id", null: false
-    t.integer "location_id", null: false
     t.string "name", null: false
     t.string "website"
     t.string "phone_number"
@@ -76,7 +66,8 @@ ActiveRecord::Schema.define(version: 2019_05_27_180825) do
     t.string "city", null: false
     t.string "state", null: false
     t.string "zipcode", null: false
-    t.index ["location_id"], name: "index_restaurants_on_location_id"
+    t.float "lng"
+    t.float "lat"
     t.index ["owner_id"], name: "index_restaurants_on_owner_id"
   end
 

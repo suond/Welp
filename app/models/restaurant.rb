@@ -29,7 +29,7 @@ class Restaurant < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-    
+    has_many :reviews
 
     def opening_time_str
         self.opening_time.strftime("%I:%M %P")
@@ -37,5 +37,16 @@ class Restaurant < ApplicationRecord
 
     def closing_time_str
         self.closing_time.strftime("%I:%M %P")
+    end
+
+    def averageReviewScore
+        sum = 0;
+        reviews = self.reviews
+        reviews.each do |review|
+            sum = sum + review.rating
+        end
+
+        avg = sum*1.0 / (reviews.length)
+        sprintf("%.2f", avg)
     end
 end
