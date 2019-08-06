@@ -6,8 +6,7 @@ const mapStateToProps = state => {
     return {
         restaurant: {
             name: "",
-            owner_id: state.session.currentUserId,
-            location_id: 1, 
+            owner_id: state.session.currentUserId, 
             address: "",
             city: "",
             state: "AL",

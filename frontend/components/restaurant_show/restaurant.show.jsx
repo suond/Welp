@@ -3,7 +3,7 @@ import React from 'react'
 import RestaurantShowHeader from './restaurant_show_header'
 import RestaurantShowContent from './restaurant_show_content'
 import RestaurantShowHours from './restaurant_show_hours';
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 class RestaurantShow extends React.Component{
     constructor(props){
@@ -49,7 +49,7 @@ class RestaurantShow extends React.Component{
 
         const displayC =  <RestaurantShowContent restaurant={restaurant}/> 
 
-        const displayHours =  <RestaurantShowHours restaurant={restaurant}/> 
+        const displayHours =  <RestaurantShowHours restaurant={restaurant} reviews={restaurant.reviews}/> 
         
         return (
             <div className="bg-ghostwhite">

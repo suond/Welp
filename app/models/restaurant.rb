@@ -4,7 +4,6 @@
 #
 #  id           :bigint           not null, primary key
 #  owner_id     :integer          not null
-#  location_id  :integer          not null
 #  name         :string           not null
 #  website      :string
 #  phone_number :string
@@ -16,6 +15,8 @@
 #  city         :string           not null
 #  state        :string           not null
 #  zipcode      :string           not null
+#  lng          :float
+#  lat          :float
 #
 
 class Restaurant < ApplicationRecord
@@ -48,5 +49,9 @@ class Restaurant < ApplicationRecord
 
         avg = sum*1.0 / (reviews.length)
         sprintf("%.2f", avg)
+    end
+    def numReviews 
+
+        self.reviews.length
     end
 end

@@ -16,7 +16,7 @@ import RestaurantShowContainer from './restaurant_show/restaurant_show_container
 import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
 import RestaurantEditFormContainer from './restaurant_form/restaurant_edit_form_container'
 import SearchResult from './search/search_container'
-
+import ReviewCreateForm from './review_form/review_create_form'
 
 const App = (props) => {
     
@@ -25,6 +25,8 @@ const App = (props) => {
         <div className="content">
             <ProtectedRoute  path="/restaurants" component={UserNavBar} />
         <Switch>
+            
+            <ProtectedRoute exact path="/restaurants/:restaurantId/reviews/new" component={ReviewCreateForm} />
             <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
             <ProtectedRoute path="/restaurants/:restaurantId/edit" component={RestaurantEditFormContainer} />
             <ProtectedRoute path="/restaurants/new" component={RestaurantCreateFormContainer} />

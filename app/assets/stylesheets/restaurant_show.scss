@@ -102,6 +102,11 @@
         }
     }
 
+    .show-review-hours-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .hour-container {
         border-left: 1px solid lightgray;
         padding: 12px;
