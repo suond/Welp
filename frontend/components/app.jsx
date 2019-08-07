@@ -16,7 +16,7 @@ import RestaurantShowContainer from './restaurant_show/restaurant_show_container
 import RestaurantCreateFormContainer from './restaurant_form/restaurant_create_form_container'
 import RestaurantEditFormContainer from './restaurant_form/restaurant_edit_form_container'
 import SearchResult from './search/search_container'
-import ReviewCreateForm from './review_form/review_create_form'
+import ReviewCreateForm from './review_form/review_create_form_container'
 
 const App = (props) => {
     

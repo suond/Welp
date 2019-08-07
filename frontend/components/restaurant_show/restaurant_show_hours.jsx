@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const RestaurantShowHours = (props) => {
     const restaurant = props.restaurant
-    const reviews = Object.keys(props.reviews).map( idx => {
+    const reviews = props.reviews ? Object.keys(props.reviews).map( idx => {
         console.log(idx)
         return (
         <div key={idx}>
@@ -12,7 +12,7 @@ const RestaurantShowHours = (props) => {
             <br></br>
         </div>
         )
-    })
+    }) : null;
     return (
         <div className="show-review-hours-container">
             <div>

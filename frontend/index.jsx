@@ -4,6 +4,8 @@ import configureStore from './store/store'
 import Root from './components/root'
 import {login, logout, signup} from './actions/session_actions'
 import {fetchRestaurants, fetchRestaurant, createRestaurant, fetchSearchRestaurants} from './actions/restaurant_actions'
+import {fetchReview} from './actions/review_actions'
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
     const root = document.getElementById("root")
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // window.fetchRestaurant = fetchRestaurant;
     // window.createRestaurant = createRestaurant;
     // window.fetchSearch = fetchSearchRestaurants;
+    // window.fetchReview = fetchReview
 
 //end
     ReactDOM.render(<Root store={store}/>, root)

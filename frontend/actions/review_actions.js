@@ -23,7 +23,7 @@ const receiveReview = review => {
 const removeReview = review => {
     return {
         type: REMOVE_REVIEW,
-        restId: review.id
+        reviewId: review.id
     }
 }
 
@@ -41,10 +41,7 @@ export const clearErrors = () => {
 }
 
 
-export const fetchReviews = () => dispatch => {
-    return APIUtils.fetchReviews()
-    .then(reviews => dispatch(receiveAllReviews(reviews)))
-}
+
 export const fetchReview = (id) => dispatch => {
     return APIUtils.fetchReview(id)
     .then(review => dispatch(receiveReview(review)))
@@ -63,14 +60,7 @@ export const updateReview = (review, id) => dispatch => {
     )
 }
 
-export const fetchSearchReviews = (query) => dispatch => {
-    return APIUtils.searchReview(query)
-    .then(reviews => {
-        
-        return dispatch(receiveSearchReviews(reviews))
-    
-    })
-}
+
 
 export const deleteReview = id => dispatch => {
     return APIUtils.deleteReview(id)
