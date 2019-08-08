@@ -6,7 +6,6 @@ const RestaurantShowHours = (props) => {
         console.log(idx)
         return (
         <div key={idx}>
-            <h2>{props.reviews[idx].title}</h2>
             <p>{props.reviews[idx].body}</p>
             <p>{props.reviews[idx].rating}</p>
             <br></br>

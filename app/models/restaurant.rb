@@ -48,7 +48,7 @@ class Restaurant < ApplicationRecord
         end
 
         avg = sum*1.0 / (reviews.length)
-        sprintf("%.2f", avg)
+        sprintf("%.2f", avg).to_f || 0
     end
     def numReviews 
 

@@ -1,0 +1,55 @@
+.review-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .review-pseudo-input{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 18px;
+        cursor: text;
+        max-width: 630px;
+    }
+    .review-form-header{
+        color: #0073bb;
+        text-overflow: ellipsis;
+        font-size: 36px;
+        display: block;
+        max-width: 100%;
+        margin: 12px 0;
+        &:hover{
+            // border-bottom: 2px solid #0073bb;
+            // border-radius: 2px;
+            text-decoration: underline;
+        }
+    }
+    .review-radio-container{
+        display: flex;
+        justify-content: center;
+    }
+    .review-form-submit-gtn{
+        margin-top: 10px;
+            .form-btn{
+                background: #d32323;
+                color: white;
+                border-radius: 3px;
+                font-weight: bold;
+                padding: 10px 13px;
+                font-size: 16px;
+                border: 1px solid #d32323;
+                cursor: pointer;
+            }
+
+    }
+}
+
+.review-body-area{
+    width: 587px;
+    height: 258px;
+    resize: none;
+    border: none;
+    margin: 10px 0;
+    &:focus{
+        outline: none;
+    }
+    
+}

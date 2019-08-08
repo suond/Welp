@@ -3,7 +3,6 @@
 # Table name: reviews
 #
 #  id            :bigint           not null, primary key
-#  title         :string
 #  body          :string
 #  rating        :float            not null
 #  user_id       :integer          not null
@@ -13,7 +12,7 @@
 #
 
 class Review < ApplicationRecord
-    validates :title, :body, :rating, presence: true
+    validates :body, :rating, presence: true
 
     belongs_to :user,
     foreign_key: :user_id,
