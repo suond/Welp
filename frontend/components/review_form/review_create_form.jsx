@@ -35,16 +35,36 @@ class ReviewCreateForm extends React.Component{
     }
 
     handleOptionChange(changeEvent) {
+        console.log(changeEvent.target.value)
         this.setState({
             rating: changeEvent.target.value,
             selectedOption: changeEvent.target.value
         })
         
+        //changeEvent.target.classList.toggle("radio-star-unfilled")
+        // this.handleRadioStarClasses();
+    }
+
+    handleRadioStarClasses(){
+        let radioBtns = document.querySelectorAll(".radio-star");
+        // a[4].classList.add("filled");
+        // console.log(this.state.rating)
+        radioBtns.forEach( (radio, idx) => {
+            if (idx + 1 <= this.state.rating) {
+                radio.classList.remove("unfilled")
+                radio.classList.add("filled")
+            } else {
+                radio.classList.remove("filled")
+                radio.classList.add("unfilled")
+                
+            }
+        })
     }
 
     render() {
         let rest = this.props.restaurant || {};
-        console.log(this.state)
+        // console.log(this.state)
+        this.handleRadioStarClasses()
         return (
             <div className="review-form-wrapper">
                 <Link to={`restaurant/${this.props.match.params.restaurantId}`} className="review-form-header">
@@ -53,31 +73,31 @@ class ReviewCreateForm extends React.Component{
                 
                 <form onSubmit={this.handleSubmit}>
                     <div className="review-pseudo-input">
+                        
                         <div className="review-radio-container">
                             <label>
-                                <input type="radio" value="1" onChange={this.handleOptionChange} checked={this.state.selectedOption == 1}/> 1 star
+                                <input className="radio-star unfilled" type="radio" value="1" onChange={this.handleOptionChange} checked={this.state.selectedOption == 1}/> 
                             </label>
                             <label>
-                                <input type="radio" value="2" onChange={this.handleOptionChange} checked={this.state.selectedOption == 2}/> 2 star
+                                <input  className="radio-star unfilled" type="radio" value="2" onChange={this.handleOptionChange} checked={this.state.selectedOption == 2}/> 
                             </label>
                             <label>
-                                <input type="radio" value="3" onChange={this.handleOptionChange} checked={this.state.selectedOption == 3}/> 3 star
+                                <input className="radio-star unfilled" type="radio" value="3" onChange={this.handleOptionChange} checked={this.state.selectedOption == 3}/>
                             </label>
                             <label>
-                                <input type="radio" value="4" onChange={this.handleOptionChange} checked={this.state.selectedOption == 4}/> 4 star
+                                <input className="radio-star unfilled" value="4" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 4}/> 
                             </label>
                             <label>
-                                <input type="radio" value="5" onChange={this.handleOptionChange} checked={this.state.selectedOption == 5}/> 5 star
+                                <input className="radio-star unfilled" value="5" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 5}/>
                             </label>
+                            <span className="span-beside-radio">Select your rating</span>
                         </div>
-                        <textarea className="review-body-area" value={this.state.body} onChange={this.onChange("body")} placeholder="write your review here"></textarea>
+                        <textarea className="review-body-area" value={this.state.body} onChange={this.onChange("body")} placeholder="Your review helps others learn about great local businesses."></textarea>
                     </div>
                         <div className="review-form-submit-gtn">
                             <input type="submit" value="Post Review" className="form-btn"/>
                             <Link to={`/restaurants/${this.props.match.params.restaurantId}`}> cancel</Link>
                         </div>
-                    
-                    
                 </form>
             </div>
         )

@@ -42,6 +42,36 @@
     }
 }
 
+.radio-star{
+    margin: .15em 2px;
+    height: 24px;
+    width: 24px;
+}
+
+.radio-star:before{
+    background-image: image-url('yelp_star_sheet.png');
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    content: "";
+    display: inline-block;
+    cursor: pointer;
+   
+}
+
+.span-beside-radio{
+    margin-left: 12px;
+}
+
+.unfilled:before{
+    
+    background-position-y: 0px;
+}
+.filled:before{
+    
+    background-position-y: -24px;
+    
+}
 .review-body-area{
     width: 587px;
     height: 258px;
