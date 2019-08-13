@@ -8,6 +8,7 @@ class ReviewCreateForm extends React.Component{
         this.state = props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleOptionChange = this.handleOptionChange.bind(this);
+        this.handleRadioStarClasses = this.handleRadioStarClasses.bind(this);
         this.sss;
     }
     
@@ -26,7 +27,7 @@ class ReviewCreateForm extends React.Component{
     handleSubmit(e){
         e.preventDefault()
         let review = this.state;
-        delete review[selectedOption];
+        delete review["selectedOption"];
         this.props.processData(review).then(review => {
             
             
@@ -41,8 +42,6 @@ class ReviewCreateForm extends React.Component{
             selectedOption: changeEvent.target.value
         })
         
-        //changeEvent.target.classList.toggle("radio-star-unfilled")
-        // this.handleRadioStarClasses();
     }
 
     handleRadioStarClasses(){
@@ -61,9 +60,25 @@ class ReviewCreateForm extends React.Component{
         })
     }
 
+    handleHoverIn(event){
+        let rate = event.target.value;
+
+        let radioBtns = document.querySelectorAll(".radio-star");
+        radioBtns.forEach( (radio, idx) => {
+            if (idx + 1 <= rate) {
+                radio.classList.remove("unfilled")
+                radio.classList.add("filled")
+            } else {
+                radio.classList.remove("filled")
+                radio.classList.add("unfilled")
+                
+            }
+        })
+    }
+
     render() {
         let rest = this.props.restaurant || {};
-        // console.log(this.state)
+        
         this.handleRadioStarClasses()
         return (
             <div className="review-form-wrapper">
@@ -76,19 +91,19 @@ class ReviewCreateForm extends React.Component{
                         
                         <div className="review-radio-container">
                             <label>
-                                <input className="radio-star unfilled" type="radio" value="1" onChange={this.handleOptionChange} checked={this.state.selectedOption == 1}/> 
+                                <input className="radio-star unfilled" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleRadioStarClasses} type="radio" value="1" onChange={this.handleOptionChange} checked={this.state.selectedOption == 1}/> 
                             </label>
                             <label>
-                                <input  className="radio-star unfilled" type="radio" value="2" onChange={this.handleOptionChange} checked={this.state.selectedOption == 2}/> 
+                                <input  className="radio-star unfilled" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleRadioStarClasses} type="radio" value="2" onChange={this.handleOptionChange} checked={this.state.selectedOption == 2}/> 
                             </label>
                             <label>
-                                <input className="radio-star unfilled" type="radio" value="3" onChange={this.handleOptionChange} checked={this.state.selectedOption == 3}/>
+                                <input className="radio-star unfilled" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleRadioStarClasses} type="radio" value="3" onChange={this.handleOptionChange} checked={this.state.selectedOption == 3}/>
                             </label>
                             <label>
-                                <input className="radio-star unfilled" value="4" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 4}/> 
+                                <input className="radio-star unfilled" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleRadioStarClasses} value="4" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 4}/> 
                             </label>
                             <label>
-                                <input className="radio-star unfilled" value="5" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 5}/>
+                                <input className="radio-star unfilled" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleRadioStarClasses} value="5" type="radio" onChange={this.handleOptionChange} checked={this.state.selectedOption == 5}/>
                             </label>
                             <span className="span-beside-radio">Select your rating</span>
                         </div>
