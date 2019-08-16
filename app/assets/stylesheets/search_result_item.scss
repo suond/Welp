@@ -2,9 +2,12 @@
     display: flex;
     .search-res-icon{
         height: 175px;
-        width: 175px;
+        width: 210px;
         border-radius: 4px;
-        margin-right: 10px;
+        margin-right: 15px;
+    }
+    .search-res-left{
+        width: 150px;
     }
     border-bottom: 1px solid lightgray;
     padding: 10px 0;

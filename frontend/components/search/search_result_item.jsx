@@ -13,11 +13,11 @@ const SearchResultItem = (props) => {
                         <div className="upper-search-result">
                             <div className="search-res-left">
                                 <div>
-                                    <span>{props.num}. </span>
+                                    <span>{props.num + 1}. </span>
                                     <Link to={`/restaurants/${props.restaurant.id}`} className="search-link-span">
                                         <span>{props.restaurant.name}</span>
                                     </Link>    
-                                    <div className="four_five-reg star-rating"></div>
+                                    <div className="four_five-reg star-rating star-reg"></div>
                                     
                                 </div>
                             </div>

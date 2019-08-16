@@ -55,7 +55,7 @@ class RestaurantShowHeader extends React.Component{
             <div className="header-restaurant">
                     <div>
                         <h1>{restaurant.name}</h1>
-                        <div className="star-rating four_five-lg"></div>
+                        <div className="star-rating five-lg star-lg"></div>
                          <Link to={`/restaurants/${restaurant.id}/edit`} className="link-btn show-header">Edit</Link>
                     </div>
                     <div className="show-restaurant-buttons"> 
