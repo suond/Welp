@@ -26,8 +26,8 @@ class RestaurantIndexItem extends React.Component{
                         <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
                     </h3>
                     <div className="star-n-num-review-container">
-                    <div className={rating}></div>
-                        <span># reviews</span>
+                    <div className="star-rating five-rg"></div>
+                        <span>{restaurant.numReviews} reviews</span>
                     </div>
                     <div className="location">
                         <h3>{restaurant.city}, {restaurant.state}</h3>

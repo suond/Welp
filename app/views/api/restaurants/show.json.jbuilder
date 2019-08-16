@@ -4,6 +4,9 @@ json.set! "reviews" do
     @restaurant.reviews.each do |review|
         json.set! review.id do
             json.extract! review, :body, :rating, :user_id, :restaurant_id
+            json.user do 
+                json.extract! review.user, :fName, :lName, :zipcode 
+            end
         end
     end
 end

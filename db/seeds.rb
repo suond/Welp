@@ -14,6 +14,8 @@ dummyAvatar = open('https://s3-us-west-1.amazonaws.com/aa-welp-dev/jk.png')
 dummyUser.avatar.attach(io: dummyAvatar, filename: 'avatar.jpg')
 
 secondUser = User.create!(fName: "Cloud", lName: "Strife", zipcode: "99920", password: "123456", email: "bustersword@this.com" )
+thirdUser = User.create!(fName: "Mario", lName: "Mario", zipcode: "95210", password: "123456", email: "mushroom@this.com" )
+fourthUser = User.create!(fName: "Locke", lName: "Picker", zipcode: "23231", password: "123456", email: "redkey@this.com" )
 
 
 restBurger = Restaurant.create!(owner_id: 1, location_id: 1, name: "Out-n-In", opening_time:"10:00", closing_time:"17:00", address:"1234 not a real address", city: "Stockton", state:"CA", zipcode: "12345", phone_number: "123-456-7890", website: "https://www.google.com")
@@ -37,17 +39,17 @@ restPho.photos.attach(io: condi, filename: "condiments.jpg")
 
 restIce1 = Restaurant.create!(owner_id: 2, location_id: 3, name: "Eye Scream", opening_time: "9:00 am", closing_time: "7:30 pm", address: "1234 not a real address", city: "Redwood", state: "CA", zipcode: "23456", phone_number: "209-093-5656", website: "https://eyescream.com")
 #photo 1 and photo 2 ice
-vanilla_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/vanilla_ice.jpg')
+vanilla_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/ice_cream_1.png')
 restIce1.photos.attach(io: vanilla_ice, filename: "vanilla_ice.jpg")
-strawberry_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/strawberry_ice.jpg')
+strawberry_ice = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/ice_cream_2.png')
 restIce1.photos.attach(io: strawberry_ice, filename: "strawberry_ice.jpg")
 
 restTaco1 = Restaurant.create!(owner_id: 1, location_id: 2, name: "4 Taco", opening_time: "9:00 am", closing_time: "7:30 pm", address: "4321 not a real address", city: "Pleasanton", state: "CA", zipcode: "34567", phone_number: "209-093-3324", website: "https://taco.com")
 #photo 1 and photo 2 taco
-taco_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/taco_1.png')
-restTaco1.photos.attach(io: taco_1, filename: "taco_1.jpg")
 taco_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/taco_2.png')
 restTaco1.photos.attach(io: taco_2, filename: "taco_2.jpg")
+taco_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/taco_1.png')
+restTaco1.photos.attach(io: taco_1, filename: "taco_1.jpg")
 
 
 restIndian = Restaurant.create!(owner_id: 2, location_id: 2, name: "Curray", opening_time: "9:00 am", closing_time: "9:00 pm", address: "4321 Curry Street", city: "Los Angeles", state: "CA", zipcode: "45678", phone_number: "818-123-3324", website: "https://curray.com")
@@ -73,10 +75,10 @@ restSteak.photos.attach(io: steak_2, filename: "steak_2.jpg")
 
 restSmoothie = Restaurant.create!(owner_id: 2, location_id: 2, name: "Blended", opening_time: "9:00 am", closing_time: "8:00 pm", address: "Bam a Lam", city: "Dover", state: "DE", zipcode: "43324", phone_number: "000-123-1121", website: "https://willitblend.com")
 #photo1 smooth and photo2 smooth
-smoothie_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/smoothie_1.png')
-restSmoothie.photos.attach(io: smoothie_1, filename: "smoothie_1.jpg")
 smoothie_2 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/smoothie_2.png')
 restSmoothie.photos.attach(io: smoothie_2, filename: "smoothie_2.jpg")
+smoothie_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/smoothie_1.png')
+restSmoothie.photos.attach(io: smoothie_1, filename: "smoothie_1.jpg")
 
 
 restCookie = Restaurant.create!(owner_id: 2, location_id: 2, name: "Circle Ahoy", opening_time: "9:00 am", closing_time: "8:00 pm", address: "1515 Degree Ave", city: "Dover", state: "DE", zipcode: "43324", phone_number: "000-123-1021", website: "https://circlesnack.com")
@@ -118,7 +120,5 @@ restFriedChicken = Restaurant.create!(owner_id: 1, location_id: 2, name: "Batter
 friedC = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/friedC_1.png')
 restFriedChicken.photos.attach(io: friedC, filename: "friedC.jpg")
 
-# restBar = Restaurant.create!(owner_id: 1, location_id: 2, name: "Brew and Booze", opening_time: "10:00 am", closing_time: "11:00 pm", address: "2222 Another Address", city: "Dallas", state: "TX", zipcode: "43221", phone_number: "023-123-1021", website: "https://brewbooze.com")
-# beer_1 = open('https://aa-welp-dev.s3-us-west-1.amazonaws.com/beer_1.png')
-# restBar.photos.attach(io: beer_1, filename: "beer_1.jpg")
+
 

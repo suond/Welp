@@ -111,7 +111,7 @@ class ReviewCreateForm extends React.Component{
                     </div>
                         <div className="review-form-submit-gtn">
                             <input type="submit" value="Post Review" className="form-btn"/>
-                            <Link to={`/restaurants/${this.props.match.params.restaurantId}`}> cancel</Link>
+                            <Link to={`/restaurants/${this.props.match.params.restaurantId}`} style={ {fontSize: "18px"} }> cancel</Link>
                         </div>
                 </form>
             </div>
