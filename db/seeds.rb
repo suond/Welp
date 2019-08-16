@@ -17,6 +17,8 @@ secondUser = User.create!(fName: "Cloud", lName: "Strife", zipcode: "99920", pas
 thirdUser = User.create!(fName: "Mario", lName: "Mario", zipcode: "95210", password: "123456", email: "mushroom@this.com" )
 fourthUser = User.create!(fName: "Locke", lName: "Picker", zipcode: "23231", password: "123456", email: "redkey@this.com" )
 
+#write a single review for each restaurant
+
 
 restBurger = Restaurant.create!(owner_id: 1, location_id: 1, name: "Out-n-In", opening_time:"10:00", closing_time:"17:00", address:"1234 not a real address", city: "Stockton", state:"CA", zipcode: "12345", phone_number: "123-456-7890", website: "https://www.google.com")
 burgerPhoto1 = open('https://s3-us-west-1.amazonaws.com/aa-welp-dev/burger.jpg')

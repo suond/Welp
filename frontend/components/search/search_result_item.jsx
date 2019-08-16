@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import StarRating from '../restaurant/star_rating'
 const SearchResultItem = (props) => {
         let phoneNumber = props.restaurant.phone_number;
         
@@ -17,7 +18,8 @@ const SearchResultItem = (props) => {
                                     <Link to={`/restaurants/${props.restaurant.id}`} className="search-link-span">
                                         <span>{props.restaurant.name}</span>
                                     </Link>    
-                                    <div className="four_five-reg star-rating star-reg"></div>
+                                    {/* <div className="four_five-reg star-rating star-reg"></div> */}
+                                    <StarRating averageScore={props.restaurant.averageReviewScore}  size="reg" />
                                     
                                 </div>
                             </div>

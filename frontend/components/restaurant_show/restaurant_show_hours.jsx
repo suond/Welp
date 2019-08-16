@@ -8,6 +8,8 @@ const RestaurantShowHours = (props) => {
         <div key={idx}>
             <p>{props.reviews[idx].body}</p>
             <p>{props.reviews[idx].rating}</p>
+            <p>By: {props.reviews[idx].user.fName} {props.reviews[idx].user.lName}</p>
+            <p>zipcode: {props.reviews[idx].user.zipcode}</p>
             <br></br>
         </div>
         )

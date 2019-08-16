@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
-
+import StarRating from '../restaurant/star_rating'
 
 class RestaurantShowHeader extends React.Component{
     constructor(props){
@@ -55,7 +55,8 @@ class RestaurantShowHeader extends React.Component{
             <div className="header-restaurant">
                     <div>
                         <h1>{restaurant.name}</h1>
-                        <div className="star-rating five-lg star-lg"></div>
+                        {/* <div className="star-rating five-lg star-lg"></div> */}
+                        <StarRating averageScore={restaurant.averageReviewScore}  size="lg" />
                          <Link to={`/restaurants/${restaurant.id}/edit`} className="link-btn show-header">Edit</Link>
                     </div>
                     <div className="show-restaurant-buttons"> 

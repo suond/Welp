@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import StarRating from './star_rating'
+
 class RestaurantIndexItem extends React.Component{
 
     constructor(props){
@@ -7,14 +9,15 @@ class RestaurantIndexItem extends React.Component{
     }
 
 
-    ratingValue(restaurant){
-        let rating;
-    }
+    // ratingValue(restaurant){
+    //     let rating = restaurant.averageReviewScore
+    // }
 
     render() {
         
         const restaurant = this.props.restaurant;
-        const rating = restaurant.numReviews > 0 ? "four_five-reg star-rating star-reg" : "five-reg star-rating star-reg"
+        // const rating = restaurant.numReviews > 0 ? "four_five-reg star-rating star-reg" : "five-reg star-rating star-reg"
+        // console.log(restaurant.averageReviewScore)
         let thumb = null;
         if (restaurant.photoUrl)
             thumb = restaurant.photoUrl[0];
@@ -31,7 +34,7 @@ class RestaurantIndexItem extends React.Component{
                         <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
                     </h3>
                     <div className="star-n-num-review-container">
-                    <div className={rating}></div>
+                    <StarRating averageScore={restaurant.averageReviewScore}  size="reg" />
                         <span>{restaurant.numReviews} reviews</span>
                     </div>
                     <div className="location">

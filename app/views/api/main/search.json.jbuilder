@@ -4,6 +4,7 @@ json.items do
       json.name item.name
       json.address item.address
       json.phone_number item.phone_number
+      json.averageReviewScore item.averageReviewScore
       json.set! "photoUrl" do
           json.array! item.photos.map { |photo| url_for(photo)}
             
