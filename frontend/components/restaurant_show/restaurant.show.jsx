@@ -46,10 +46,10 @@ class RestaurantShow extends React.Component{
         deleteRestaurant={this.props.deleteRestaurant}
         currentUserId={this.props.currentUserId}
         />
-
+        
         const displayC =  <RestaurantShowContent restaurant={restaurant}/> 
 
-        const displayHours =  <RestaurantShowHours restaurant={restaurant} reviews={restaurant.reviews}/> 
+        const displayHours =  <RestaurantShowHours restaurant={restaurant} reviews={restaurant.reviews} currentUser={this.props.currentUser}/> 
         
         return (
             <div className="bg-ghostwhite">

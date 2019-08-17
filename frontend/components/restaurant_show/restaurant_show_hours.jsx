@@ -1,7 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+
+import ReviewShow from '../review_form/review_show'
 const RestaurantShowHours = (props) => {
-    const restaurant = props.restaurant
+    // const restaurant = props.restaurant
+    // const currentUser = props.currentUser
+    const {restaurant, currentUser} = props
+    console.log(currentUser)
     const reviews = props.reviews ? Object.keys(props.reviews).map( idx => {
         console.log(idx)
         return (
@@ -16,13 +21,12 @@ const RestaurantShowHours = (props) => {
     }) : null;
     return (
         <div className="show-review-hours-container">
-            <div>
-                <Link to={`/restaurants/${restaurant.id}/reviews/new`}>
-                        add review
-                </Link>
+            
+                <ReviewShow restaurant={restaurant} reviews={props.reviews} currentUser={currentUser}/>
                 
-                {reviews}
-            </div>
+                
+                {/* {reviews} */}
+            
         <div className="hour-container">
             <h2 className="hour-h2">Hours</h2>
              <table>

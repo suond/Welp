@@ -1,0 +1,42 @@
+.review-container{
+    display: flex;
+    width: 720px;
+    
+    margin-right: 30px;
+    .start-review-container{
+        height: 25%;
+        display: flex;
+        width:100%;
+        justify-content: space-between;
+        border-bottom: 1px solid #cccccc;
+        padding: 10px 0;
+        .review-user-info{
+            display: flex;
+            img{
+                height: 60px;
+                margin-right: 10px;
+            }
+        }
+        .create-review-container{
+            background-color: #f5f5f5;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            .create-review-link{
+                color: #0073bb;
+                padding: 10px 7px;
+                border-bottom: 1px solid #cccccc;
+            }
+            .create-review-link:hover{
+                text-decoration-line: underline;
+            }
+            strong{
+                font-weight: 700;
+            }
+        }
+    
+    }
+}
+
