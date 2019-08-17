@@ -5,7 +5,11 @@ json.set! "reviews" do
         json.set! review.id do
             json.extract! review, :body, :rating, :user_id, :restaurant_id
             json.user do 
-                json.extract! review.user, :fName, :lName, :zipcode 
+                json.extract! review.user, :fName, :lName, :zipcode
+                if review.user.avatar.attached?
+                    json.photoUrl url_for(review.user.avatar)
+                end
+                
             end
         end
     end

@@ -2,7 +2,7 @@ import React from 'react'
 
 const StarRating = (props) => {
     let avgScore = props.averageScore;
-    // console.log(props)
+    
     let size = props.size === 'lg' ? "star-lg" : "star-reg"
     let className;
     function determineStar(avgScore){

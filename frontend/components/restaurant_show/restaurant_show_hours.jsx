@@ -6,19 +6,6 @@ const RestaurantShowHours = (props) => {
     // const restaurant = props.restaurant
     // const currentUser = props.currentUser
     const {restaurant, currentUser} = props
-    console.log(currentUser)
-    const reviews = props.reviews ? Object.keys(props.reviews).map( idx => {
-        console.log(idx)
-        return (
-        <div key={idx}>
-            <p>{props.reviews[idx].body}</p>
-            <p>{props.reviews[idx].rating}</p>
-            <p>By: {props.reviews[idx].user.fName} {props.reviews[idx].user.lName}</p>
-            <p>zipcode: {props.reviews[idx].user.zipcode}</p>
-            <br></br>
-        </div>
-        )
-    }) : null;
     return (
         <div className="show-review-hours-container">
             
