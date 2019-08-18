@@ -19,7 +19,11 @@ const SearchResultItem = (props) => {
                                         <span>{props.restaurant.name}</span>
                                     </Link>    
                                     {/* <div className="four_five-reg star-rating star-reg"></div> */}
-                                    <StarRating averageScore={props.restaurant.averageReviewScore}  size="reg" />
+                                    <div className="search-res-score-num">
+                                        <StarRating averageScore={props.restaurant.averageReviewScore}  size="reg" />
+                                        <span>{props.restaurant.numReviews} reviews</span>
+                                    </div>
+                                    
                                     
                                 </div>
                             </div>

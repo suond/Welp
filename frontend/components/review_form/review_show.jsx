@@ -2,19 +2,16 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import ReviewUserInfo from './review_user_info'
 import ReviewShowItem from './review_show_item'
-import StarRating from '../restaurant/star_rating'
 const ReviewShow = (props) => {
     const {restaurant, currentUser, reviews} = props
     const reviewsArr = reviews ? Object.values(reviews) : null;
 
-    const revAvatar = !reviewsArr ? null : reviewsArr.map( (review,key) => {
-        return(
-                <ReviewUserInfo user={review.user} key={key}/>
-        )
-    })
-    const revContent = !reviewsArr ? null : reviewsArr.map( (review, key) => {
-        return(
-                <ReviewShowItem review={review} key={key}/>
+    const reviewListItems = !reviewsArr ? null : reviewsArr.map( (review,idx) => {
+        return (
+            <div className="review-item" key={idx}>
+                <ReviewUserInfo user={review.user} />
+                <ReviewShowItem review={review} />
+            </div>
         )
     })
     
@@ -30,12 +27,7 @@ const ReviewShow = (props) => {
                 </div>
             </div>
             <div className="review-list-container">
-                <div className="review-item-user">
-                    {revAvatar}
-                </div>
-                <div className="review-item-content">
-                    {revContent}
-                </div>
+                {reviewListItems}
             </div>
         </div>
     )
