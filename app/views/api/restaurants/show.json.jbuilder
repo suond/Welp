@@ -3,9 +3,9 @@ json.extract! @restaurant, :id,:name, :website, :phone_number, :owner_id, :openi
 json.set! "reviews" do
     @restaurant.reviews.each do |review|
         json.set! review.id do
-            json.extract! review, :body, :rating, :user_id, :restaurant_id
+            json.extract! review, :body, :rating, :user_id, :restaurant_id, :created_at_f
             json.user do 
-                json.extract! review.user, :fName, :lName, :zipcode
+                json.extract! review.user, :fName, :lName, :zipcode 
                 if review.user.avatar.attached?
                     json.photoUrl url_for(review.user.avatar)
                 end

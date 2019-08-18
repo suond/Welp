@@ -41,5 +41,43 @@
     img{
         height: 60px;
         margin-right: 10px;
+        width: 60px;
     }
 }
+.review-header{
+    font-size: 20px;
+    strong{
+        color: #dd2722;
+    }
+}
+
+
+//review-item
+.review-list-container{
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+    .review-list-item-score-date{
+        display: flex;
+        margin-bottom: 20px;
+        span{
+            margin-left: 5px;
+        }
+    }
+    .review-user-info{
+        width: 145px;
+        padding: 15px 0;
+        border-bottom: 1px solid #cccccc;
+        
+    }
+    .review-item-content{
+        width: 100%;
+        
+    }
+    .review-list-item-content{
+        
+        padding: 16px;
+        border-bottom: 1px solid #cccccc;
+    }
+}
+

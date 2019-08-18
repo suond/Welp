@@ -21,4 +21,8 @@ class Review < ApplicationRecord
     belongs_to :restaurant,
     foreign_key: :restaurant_id,
     class_name: :Restaurant
+
+    def created_at_f
+        self.created_at.strftime("%-m/%-d/%Y")
+    end
 end

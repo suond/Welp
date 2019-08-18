@@ -5,26 +5,22 @@ import ReviewShowItem from './review_show_item'
 import StarRating from '../restaurant/star_rating'
 const ReviewShow = (props) => {
     const {restaurant, currentUser, reviews} = props
-    // console.log(currentUser)
-    // console.log(reviews)
-    
-    const reviewsList = reviews ? Object.keys(props.reviews).map( idx => {
-        // console.log(props.reviews[idx].rating)
-        return (
-        <div key={idx}>
-            <ReviewUserInfo user={props.reviews[idx].user}/>
-            <p>{props.reviews[idx].body}</p>
-            {/* <p>{props.reviews[idx].rating}</p> */}
-            <StarRating averageScore={props.reviews[idx].rating} size="reg" />
-            <p>By: {props.reviews[idx].user.fName} {props.reviews[idx].user.lName}</p>
-            <p>zipcode: {props.reviews[idx].user.zipcode}</p>
-            <ReviewShowItem reviewer={props.reviews[idx].user} review={props.reviews[idx]}/>
-            <br></br>
-        </div>
+    const reviewsArr = reviews ? Object.values(reviews) : null;
+
+    const revAvatar = reviewsArr.map( (review,key) => {
+        return(
+                <ReviewUserInfo user={review.user} key={key}/>
         )
-    }) : null;
+    })
+    const revContent = reviewsArr.map( (review, key) => {
+        return(
+                <ReviewShowItem review={review} key={key}/>
+        )
+    })
+    
     return (
         <div className="review-container">
+            <h2 className="review-header"><strong>Reviews </strong>for {restaurant.name} </h2>
             <div className="start-review-container">
                 <ReviewUserInfo user={currentUser} />
                 <div className="create-review-container">
@@ -34,8 +30,12 @@ const ReviewShow = (props) => {
                 </div>
             </div>
             <div className="review-list-container">
-                
-                {reviewsList}
+                <div className="review-item-user">
+                    {revAvatar}
+                </div>
+                <div className="review-item-content">
+                    {revContent}
+                </div>
             </div>
         </div>
     )
