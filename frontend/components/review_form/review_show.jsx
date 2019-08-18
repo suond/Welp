@@ -7,12 +7,12 @@ const ReviewShow = (props) => {
     const {restaurant, currentUser, reviews} = props
     const reviewsArr = reviews ? Object.values(reviews) : null;
 
-    const revAvatar = reviewsArr.map( (review,key) => {
+    const revAvatar = !reviewsArr ? null : reviewsArr.map( (review,key) => {
         return(
                 <ReviewUserInfo user={review.user} key={key}/>
         )
     })
-    const revContent = reviewsArr.map( (review, key) => {
+    const revContent = !reviewsArr ? null : reviewsArr.map( (review, key) => {
         return(
                 <ReviewShowItem review={review} key={key}/>
         )
