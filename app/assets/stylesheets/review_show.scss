@@ -63,12 +63,13 @@
         padding: 12px 0;
         border-bottom: 1px solid #cccccc;
         .review-user-info{
-            width: 100%;
+            width: 30%;
         }
     }
     .review-list-item-content{
         box-sizing: border-box;
-        padding: 0 0 0 30px;
+        // padding: 0 0 0 30px;
+        width: 70%;
         .review-list-item-score-date{
             display: flex;
             margin-bottom: 20px;

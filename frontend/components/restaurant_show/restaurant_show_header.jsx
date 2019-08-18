@@ -40,8 +40,8 @@ class RestaurantShowHeader extends React.Component{
                                     <span><i className="fas fa-skull-crossbones"></i></span>
                                     <span>This action cannot be undone...</span>
                                     <div className="delete-modal-button-container">
-                                        <button onClick={this.handleDeleteEvent}>remove</button>
-                                        <button onClick={this.handleModalClick}> don't</button>
+                                        <button onClick={this.handleDeleteEvent}>Delete</button>
+                                        <button onClick={this.handleModalClick}> Cancel</button>
                                     </div>
                                 </div>
                             </div>
